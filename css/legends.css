@@ -1,0 +1,16 @@
+td:hover {
+    background-color: black;
+    color: white;
+}
+
+td {
+    height: 80px;
+    width: 150px;
+    display: inline-flex;
+}
+
+td span {
+    align-self: flex-end;
+    width: 150px;
+    text-align: center;
+}
