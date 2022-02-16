@@ -6,7 +6,7 @@ Webterv 2. Próbálkozás projekt
 Regisztrációs űrlap
 --
 
-Bjelentkezős űrlap
+Bejelentkezős űrlap
 --
 
 Fő oldal
