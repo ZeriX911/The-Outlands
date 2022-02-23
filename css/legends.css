@@ -5,23 +5,113 @@ table {
 
 td:hover {
     background-color: black;
-    color: white;
+    color: black;
 }
 
 td {
-    height: 80px;
+    height: 90px;
     width: 150px;
     display: inline-flex;
     transform: skew(20deg);
     border: 2px solid grey;
     margin: 1px;
     cursor: pointer;
+    background-size: cover;
+    background-repeat: no-repeat;
 }
 
 td span {
+    height: fit-content;
     align-self: flex-end;
     width: 100%;
     align-content: center;
     text-align: center;
-    background-color: grey;
+    background-color: white;
+}
+
+td span span {
+    width: fit-content;
+    height: fit-content;
+    display: inline-flex;
+    transform: skew(-20deg);
+}
+
+#BHD {
+    background-image: url('../img/legends/stock.png');
+}
+
+#GIB {
+    background-image: url('../img/legends/stock.png');
+}
+
+#LIF {
+    background-image: url('../img/legends/stock.png');
+}
+
+#PAT {
+    background-image: url('../img/legends/PAT.png');
+}
+
+#WRA {
+    background-image: url('../img/legends/stock.png');
+}
+
+#BAN {
+    background-image: url('../img/legends/stock.png');
+}
+
+#CAU {
+    background-image: url('../img/legends/stock.png');
+}
+
+#MIR {
+    background-image: url('../img/legends/stock.png');
+}
+
+#OCT {
+    background-image: url('../img/legends/stock.png');
+}
+
+#WAT {
+    background-image: url('../img/legends/stock.png');
+}
+
+#CRY {
+    background-image: url('../img/legends/stock.png');
+}
+
+#REV {
+    background-image: url('../img/legends/stock.png');
+}
+
+#LOB {
+    background-image: url('../img/legends/stock.png');
+}
+
+#RAM {
+    background-image: url('../img/legends/stock.png');
+}
+
+#HOR {
+    background-image: url('../img/legends/stock.png');
+}
+
+#FUS {
+    background-image: url('../img/legends/stock.png');
+}
+
+#VAL {
+    background-image: url('../img/legends/stock.png');
+}
+
+#SEE {
+    background-image: url('../img/legends/stock.png');
+}
+
+#ASH {
+    background-image: url('../img/legends/stock.png');
+}
+
+#MMG {
+    background-image: url('../img/legends/stock.png');
 }
