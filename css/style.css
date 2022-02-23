@@ -68,7 +68,7 @@ li a:hover {
 }
 
 footer {
-    position: fixed;
+    position: absolute;
     left: 0;
     bottom: 0;
     width: 100%;
@@ -79,6 +79,15 @@ footer {
     font-size: large;
     letter-spacing: 1.35px;
 }
+
+#page-container {
+    position: relative;
+    min-height: 100vh;
+  }
+  
+  #content-wrap {
+    padding-bottom: 3rem;
+  }
 
 main {
     margin-top: 0%;
@@ -92,6 +101,8 @@ main {
     font-size: 1500%;
     text-shadow: 5px 5px 5px #000000;
     color: white;
+    margin-bottom: 5%;
+    letter-spacing: 10px;
 }
 
 #splash {
@@ -100,5 +111,5 @@ main {
 
 #mainarticle {
     font-size: x-large;
-    letter-spacing: 1.35px;
+    letter-spacing: 0.5px;
 }
