@@ -21,7 +21,7 @@ ul {
     width: 100%;
     font-family: ApexLegends;
     font-size: large;
-    letter-spacing: 2.5px;
+    letter-spacing: 1.35px;
 }
 
 li {
@@ -74,5 +74,5 @@ footer {
     text-align: center;
     font-family: ApexLegends;
     font-size: large;
-    letter-spacing: 2.5px;
+    letter-spacing: 1.35px;
 }
