@@ -3,6 +3,12 @@
     src: url(ApexRegular.otf);
 }
 
+body {
+    background-image: url(..//img/backg.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
 ul {
     list-style-type: none;
     margin: 0;
