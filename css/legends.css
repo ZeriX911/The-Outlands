@@ -13,11 +13,12 @@ td {
     width: 150px;
     display: inline-flex;
     transform: skew(20deg);
+    border: 2px solid grey;
 }
 
 td span {
     align-self: flex-end;
     width: 150px;
     text-align: center;
-    transform: skew(-20deg);
+    background-color: grey;
 }
