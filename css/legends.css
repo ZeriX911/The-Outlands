@@ -21,6 +21,7 @@ td {
 td span {
     align-self: flex-end;
     width: 100%;
+    align-content: center;
     text-align: center;
     background-color: grey;
 }
