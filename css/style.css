@@ -7,6 +7,9 @@ body {
     background-image: url(..//img/backg.png);
     background-repeat: no-repeat;
     background-size: auto;
+    background-attachment: fixed;
+    margin-left: 0%;
+    margin-right: 0%;
 }
 
 ul {
@@ -78,14 +81,24 @@ footer {
 }
 
 main {
-    margin-top: 5%;
+    margin-top: 0%;
     font-family: ApexLegends;
     text-align: center;
     color: white;
+    margin-bottom: 10%;
 }
 
 #maintitle {
-    font-size: 15rem;
+    font-size: 1500%;
     text-shadow: 5px 5px 5px #000000;
     color: white;
+}
+
+#splash {
+    width: 100%;
+}
+
+#mainarticle {
+    font-size: x-large;
+    letter-spacing: 1.35px;
 }
