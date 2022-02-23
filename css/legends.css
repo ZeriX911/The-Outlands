@@ -14,11 +14,13 @@ td {
     display: inline-flex;
     transform: skew(20deg);
     border: 2px solid grey;
+    margin: 1px;
+    cursor: pointer;
 }
 
 td span {
     align-self: flex-end;
-    width: 150px;
+    width: 100%;
     text-align: center;
     background-color: grey;
 }
