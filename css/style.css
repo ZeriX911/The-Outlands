@@ -76,3 +76,16 @@ footer {
     font-size: large;
     letter-spacing: 1.35px;
 }
+
+main {
+    margin-top: 5%;
+    font-family: ApexLegends;
+    text-align: center;
+    color: white;
+}
+
+#maintitle {
+    font-size: 15rem;
+    text-shadow: 5px 5px 5px #000000;
+    color: white;
+}
