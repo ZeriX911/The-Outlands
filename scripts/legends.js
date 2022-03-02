@@ -1,8 +1,8 @@
-function addListeners() {
-
+function ShowName(id) {
+    writeHeader(document.getElementById(id).getElementsByClassName('txt')[0].innerText);
 
 }
 
-function showLegend(id) {
-    alert(id);
-};
+function writeHeader(NAME) {
+    document.getElementById('legend-name').innerText = NAME;
+}
