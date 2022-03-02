@@ -78,7 +78,14 @@ td span {
 
 #legends-head {
     padding-top: 50px;
+    font-size: x-large;
     color: white;
+    font-weight: lighter;
+    margin-bottom: 15px;
+}
+
+#legend-name {
+    font-size: 80px;
 }
 
 #BHD {
