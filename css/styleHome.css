@@ -1,9 +1,10 @@
 #maintitle {
-    font-size: 7em;
+    font-size: 12em;
     text-shadow: 5px 5px 5px #000000;
     color: white;
     margin-bottom: 5%;
     letter-spacing: 10px;
+    overflow-wrap: break-word;
 }
 
 #splash {
