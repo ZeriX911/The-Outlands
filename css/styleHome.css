@@ -6,6 +6,10 @@
     letter-spacing: 10px;
 }
 
+body {
+    scroll-behavior: smooth;
+}
+
 #splash {
     width: 100%;
     height: auto;
@@ -22,16 +26,12 @@
     bottom: 200px;
     transform: translate(-50%, -50%);
     -ms-transform: translate(-50%, -50%);
-
     cursor: pointer;
     border: 2px solid lightgray;
-    background-color: rgba(40,40,40,0.8);
+    background-color: rgba(40, 40, 40, 0.8);
     padding: 2% 5%;
     color: white;
     font-size: large;
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-    text-shadow: -1px 1px 0 #000,
-                  1px 1px 0 #000,
-                  1px -1px 0 #000,
-                 -1px -1px 0 #000;
+    text-shadow: -1px 1px 0 #000, 1px 1px 0 #000, 1px -1px 0 #000, -1px -1px 0 #000;
 }
