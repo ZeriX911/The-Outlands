@@ -17,16 +17,16 @@
 }
 
 #mainbutton {
-    position: absolute;
-    top: 40%;
-    left: 50%;
+    position: relative;
+    left: 110px;
+    bottom: 200px;
     transform: translate(-50%, -50%);
     -ms-transform: translate(-50%, -50%);
 
     cursor: pointer;
     border: 2px solid lightgray;
     background-color: rgba(40,40,40,0.8);
-    padding: 25px 90px;
+    padding: 2% 5%;
     color: white;
     font-size: large;
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
