@@ -3,6 +3,11 @@
     src: url(ApexRegular.otf);
 }
 
+@font-face {
+    font-family: EA-Games;
+    src: url(EASPORTS15.ttf);
+}
+
 body {
     background-image: url(..//img/backg.png);
     background-repeat: no-repeat;
