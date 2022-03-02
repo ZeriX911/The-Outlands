@@ -63,7 +63,6 @@ td {
     cursor: pointer;
     background-size: cover;
     background-repeat: no-repeat;
-    z-index: 0;
 }
 
 td span {
