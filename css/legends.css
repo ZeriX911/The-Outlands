@@ -1,4 +1,4 @@
-table {
+#table-wrapper {
     height: fit-content;
     width: fit-content;
     margin-top: 200px;
@@ -10,7 +10,7 @@ table {
 }
 
 @media only screen and (max-width: 1200px) {
-    table {
+    #table-wrapper {
         height: fit-content;
         width: fit-content;
         margin: auto;
