@@ -84,13 +84,13 @@ footer {
 #page-container {
     position: relative;
     min-height: 100vh;
-  }
-  
-  #content-wrap {
-    padding-bottom: 3rem;
-  }
+}
 
-main {
+#content-wrap {
+    padding-bottom: 3rem;
+}
+
+#main {
     margin-top: 0%;
     font-family: ApexLegends;
     text-align: center;

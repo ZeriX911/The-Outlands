@@ -75,6 +75,11 @@ td span {
     background-color: white;
 }
 
+#legends-head {
+    padding-top: 50px;
+    color: white;
+}
+
 #BHD {
     background-image: url('../img/legends/stock.png');
 }
