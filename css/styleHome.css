@@ -21,6 +21,7 @@ body {
 }
 
 #mainbutton {
+    z-index: 1;
     position: relative;
     left: 110px;
     bottom: 200px;
