@@ -9,9 +9,10 @@
     <link rel="stylesheet" href="../css/style.css">
     <link rel="stylesheet" href="../css/legends.css">
     <link rel="icon" href="../img/apex.ico">
+    <script src="../scripts/legends.js"></script>
 </head>
 
-<body>
+<body onload="addListeners();">
     <div id="page-container">
         <div id="content-wrap">
             <header>
@@ -35,62 +36,64 @@
                     </ul>
                 </nav>
             </header>
-            <div id="legends-head">
-                <div id="legend-name"></div>
-                <div id="legend-type"></div>
-            </div>
-            <table>
-                <tr>
-                    <td id="BHD"><span class="txt">BLOODHOUND</span>
-                    </td>
-                    <td id="GIB"><span class="txt">GIBRALTAR</span>
-                    </td>
-                    <td id="LIF"><span class="txt">LIFELINE</span>
-                    </td>
-                    <td id="PAT">
-                        <span class="txt">PATHFINDER</span>
-                    </td>
-                    <td id="WRA"><span class="txt">WRAITH</span>
-                    </td>
-                </tr>
-                <tr>
-                    <td id="BAN"><span class="txt">BANGALORE</span>
-                    </td>
-                    <td id="CAU"><span class="txt">CAUSTIC</span>
-                    </td>
-                    <td id="MIR"><span class="txt">MIRAGE</span>
-                    </td>
-                    <td id="OCT"><span class="txt">OCTANE</span>
-                    </td>
-                    <td id="WAT"><span class="txt">WATTSON</span>
-                    </td>
-                </tr>
-                <tr>
-                    <td id="CRY"><span class="txt">CRYPTO</span>
-                    </td>
-                    <td id="REV"><span class="txt">REVENANT</span>
-                    </td>
-                    <td id="LOB"><span class="txt">LOBA</span>
-                    </td>
-                    <td id="RAM"><span class="txt">RAMPART</span>
-                    </td>
-                    <td id="HOR"><span class="txt">HORIZON</span>
-                    </td>
-                </tr>
-                <tr>
-                    <td id="FUS"><span class="txt">FUSE</span>
-                    </td>
-                    <td id="VAL"><span class="txt">VALKYRIE</span>
-                    </td>
-                    <td id="SEE"><span class="txt">SEER</span>
-                    </td>
-                    <td id="ASH"><span class="txt">ASH</span>
-                    </td>
-                    <td id="MMG"><span class="txt">MAD MAGGIE</span>
-                    </td>
-                </tr>
-            </table>
+            <main>
 
+                <div id="legends-head">
+                    <div id="legend-name"></div>
+                    <div id="legend-type"></div>
+                </div>
+                <table id="legends">
+                    <tr>
+                        <td id="BHD"><span class="txt">BLOODHOUND</span>
+                        </td>
+                        <td id="GIB"><span class="txt">GIBRALTAR</span>
+                        </td>
+                        <td id="LIF"><span class="txt">LIFELINE</span>
+                        </td>
+                        <td id="PAT">
+                            <span class="txt">PATHFINDER</span>
+                        </td>
+                        <td id="WRA"><span class="txt">WRAITH</span>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td id="BAN"><span class="txt">BANGALORE</span>
+                        </td>
+                        <td id="CAU"><span class="txt">CAUSTIC</span>
+                        </td>
+                        <td id="MIR"><span class="txt">MIRAGE</span>
+                        </td>
+                        <td id="OCT"><span class="txt">OCTANE</span>
+                        </td>
+                        <td id="WAT"><span class="txt">WATTSON</span>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td id="CRY"><span class="txt">CRYPTO</span>
+                        </td>
+                        <td id="REV"><span class="txt">REVENANT</span>
+                        </td>
+                        <td id="LOB"><span class="txt">LOBA</span>
+                        </td>
+                        <td id="RAM"><span class="txt">RAMPART</span>
+                        </td>
+                        <td id="HOR"><span class="txt">HORIZON</span>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td id="FUS"><span class="txt">FUSE</span>
+                        </td>
+                        <td id="VAL"><span class="txt">VALKYRIE</span>
+                        </td>
+                        <td id="SEE"><span class="txt">SEER</span>
+                        </td>
+                        <td id="ASH"><span class="txt">ASH</span>
+                        </td>
+                        <td id="MMG"><span class="txt">MAD MAGGIE</span>
+                        </td>
+                    </tr>
+                </table>
+            </main>
             <footer>
                 <p>The Outlands Official Project</p>
             </footer>
