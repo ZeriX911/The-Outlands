@@ -1,0 +1,189 @@
+#table-wrapper {
+    height: fit-content;
+    width: fit-content;
+    margin-top: 200px;
+    margin-left: 40px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: medium;
+    font-weight: 400;
+    z-index: 0;
+    font-family: EA-Games;
+}
+
+@media only screen and (max-width: 1200px) {
+    #table-wrapper {
+        height: fit-content;
+        width: fit-content;
+        margin: auto;
+        margin-top: 200px;
+    }
+}
+
+td:hover {
+    background-color: black;
+    color: black;
+    -webkit-animation: change-color 4s linear 0s infinite normal;
+    -moz-animation: change-color 4s linear 0s infinite normal;
+    -ms-animation: change-color 4s linear 0s infinite normal;
+    animation: change-color 4s linear 0s infinite normal;
+    border: 3px grey solid;
+    margin: 1px;
+}
+
+@-webkit-keyframes change-color {
+    0% {
+        border-color: grey;
+    }
+    50% {
+        border-color: white;
+    }
+    100% {
+        border-color: grey;
+    }
+}
+
+@keyframes change-color {
+    0% {
+        border-color: grey;
+    }
+    50% {
+        border-color: white;
+    }
+    100% {
+        border-color: grey;
+    }
+}
+
+td {
+    height: 89px;
+    width: 150px;
+    display: inline-flex;
+    transform: skew(20deg);
+    border: 2px solid grey;
+    margin: 2px;
+    cursor: pointer;
+    background-size: cover;
+    background-repeat: no-repeat;
+    color: black;
+}
+
+td span {
+    height: fit-content;
+    align-self: flex-end;
+    width: 100%;
+    align-content: center;
+    text-align: center;
+    background-color: white;
+}
+
+#legends-head {
+    padding-top: 50px;
+    font-size: x-large;
+    color: white;
+    font-weight: lighter;
+    margin-bottom: 15px;
+}
+
+#legend-name {
+    font-size: 80px;
+}
+
+#BHD {
+    background: red url('../img/legends/BLO.png') no-repeat fixed center;
+    background-size: 150px 89px;
+}
+
+#GIB {
+    background: brown url('../img/legends/GIB.png') no-repeat fixed center;
+    background-size: 150px 89px;
+}
+
+#LIF {
+    background: purple url('../img/legends/LIF.png') no-repeat fixed center;
+    background-size: 150px 89px;
+}
+
+#PAT {
+    background: blue url('../img/legends/PAT.png') no-repeat fixed center;
+    background-size: 150px 89px;
+}
+
+#WRA {
+    background: purple url('../img/legends/WRA.png') no-repeat fixed center;
+    background-size: 150px 89px;
+}
+
+#BAN {
+    background: red url('../img/legends/BAN.png') no-repeat fixed center;
+    background-size: 150px 89px;
+}
+
+#CAU {
+    background: brown url('../img/legends/CAU.png') no-repeat fixed center;
+    background-size: 150px 89px;
+}
+
+#MIR {
+    background: burlywood url('../img/legends/MIR.png') no-repeat fixed center;
+    background-size: 150px 89px;
+}
+
+#OCT {
+    background: greenyellow url('../img/legends/OCT.png') no-repeat fixed center;
+    background-size: 150px 89px;
+}
+
+#WAT {
+    background: blue url('../img/legends/WAT.png') no-repeat fixed center;
+    background-size: 150px 89px;
+}
+
+#CRY {
+    background: blue url('../img/legends/CRY.png') no-repeat fixed center;
+    background-size: 150px 89px;
+}
+
+#REV {
+    background: green url('../img/legends/REV.png') no-repeat fixed center;
+    background-size: 150px 89px;
+}
+
+#LOB {
+    background: burlywood url('../img/legends/LOB.png') no-repeat fixed center;
+    background-size: 150px 89px;
+}
+
+#RAM {
+    background: pink url('../img/legends/RAM.png') no-repeat fixed center;
+    background-size: 150px 89px;
+}
+
+#HOR {
+    background: blue url('../img/legends/HOR.png') no-repeat fixed center;
+    background-size: 150px 89px;
+}
+
+#FUS {
+    background: orangered url('../img/legends/FUS.png') no-repeat fixed center;
+    background-size: 150px 89px;
+}
+
+#VAL {
+    background: purple url('../img/legends/VAL.png') no-repeat fixed center;
+    background-size: 150px 89px;
+}
+
+#SEE {
+    background: lightblue url('../img/legends/SEE.png') no-repeat fixed center;
+    background-size: 150px 89px;
+}
+
+#ASH {
+    background: aqua url('../img/legends/ASH.png') no-repeat fixed center;
+    background-size: 150px 89px;
+}
+
+#MMG {
+    background: yellow url('../img/legends/MMG.png') no-repeat fixed center;
+    background-size: 150px 89px;
+}
