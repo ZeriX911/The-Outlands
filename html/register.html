@@ -7,6 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>The Outlands</title>
     <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/styleLogin.css">
     <link rel="icon" href="../img/apex.ico">
 </head>
 
@@ -20,10 +21,29 @@
                 <li><a href="legends.html"><span>LEGENDS</span></a></li>
                 <li><a href="maps.html"><span>MAPS</span></a></li>
                 <li><a href="lfg.html"><span>LFG</span></a></li>
-                <li class="login"><a class="active" href="#"><span>LOGIN</span></a></li>
+                <li class="login"><a class="active" href="#"><span>REGISTER</span></a></li>
             </ul>
         </nav>
     </header>
+    <main id="Container">
+        <h1 id="logintitle">Register</h1>
+        <div id="username-container"><label for="username">Username</label><br>
+            <input type="text" name="username" id="username">
+        </div>
+        <div id="email-container"><label for="email">Email</label><br>
+            <input type="email" name="email" id="email">
+        </div>
+        <div id="pwd-container"><label for="pwd">Password</label><br>
+            <input type="password" name="pwd" id="pwd">
+        </div>
+        <div id="pwd-container"><label for="pwd">Verify Password</label><br>
+            <input type="password" name="pwd-verify" id="pwd">
+        </div>
+        <div id="send-container">
+            <input type="submit" value="REGISTER">
+        </div>
+        <div id="registerhere">You already have an account? Login <a href="login.html">here</a></div>
+    </main>
     <footer>
         <p>The Outlands Official Project</p>
     </footer>
