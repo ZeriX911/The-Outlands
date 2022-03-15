@@ -24,29 +24,23 @@ table {
     border: 1px solid #ffffff;
     text-align: center;
     vertical-align: middle;
-
-}
-
-tr {
-    border-top: 1px solid white;
-    border-bottom: 1px solid white;
+    border-collapse: collapse;
 }
 
 th {
-    border-bottom: 1px solid white;
     font-size: x-large;
     height: 50px;
-    border-collapse: collapse;
+    background-color: rgba(255, 0, 0, 0.2);
 }
 
 td {
     font-size: large;
     height: 50px;
-    border-collapse: collapse;
 }
 
-td:nth-child(1) {
-    border-left: 1px solid white;
+.team {
+    border: solid 1px white;
+    background-color: rgba(0, 0, 0, 0.2);
 }
 
 input[type=submit],
