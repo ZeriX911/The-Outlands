@@ -26,7 +26,9 @@
         </nav>
     </header>
     <main id="Container">
-        <h1 id="logintitle">Register</h1>
+        <form>
+            <fieldset>
+                <h1 id="logintitle">Register</h1>
         <div id="username-container"><label for="username">Username</label><br>
             <input type="text" name="username" id="username">
         </div>
@@ -39,6 +41,9 @@
         <div id="pwd-container"><label for="pwd">Verify Password</label><br>
             <input type="password" name="pwd-verify" id="pwd">
         </div>
+        <div id="date-container"><label for="date">Date Of Birth</label><br>
+            <input type="date" id="date" name="date" min="1900-01-01" max="2030-12-31" value="2022-01-01">
+        </div>
         <div id="send-container">
             <input type="submit" value="REGISTER">
         </div>
@@ -46,6 +51,8 @@
             <input type="reset" value="RESET">
         </div>
         <div id="registerhere">You already have an account? Login <a href="login.html">here</a></div>
+            </fieldset>
+        </form>
     </main>
     <footer>
         <p>The Outlands Official Project</p>

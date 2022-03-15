@@ -14,8 +14,12 @@ label {
     margin-top: 25px;
 }
 
-#pwd-container, #email-container {
+#pwd-container, #email-container, #date-container {
     margin-top: 25px;
+}
+
+fieldset {
+    border: none;
 }
 
 #registerhere {
@@ -42,7 +46,8 @@ main>h1:nth-of-type(2) {
 
 input[type=email],
 input[type=password],
-input[type=text] {
+input[type=text],
+input[type=date] {
     width: 30%;
     border: 1px solid #ccc;
     border-radius: 4px;
