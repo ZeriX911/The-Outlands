@@ -1,3 +1,7 @@
-#page-conatiner {
-    margin-top: 10%;
+main {
+    margin-top: 100px;
+}
+
+div {
+    display: block;
 }
