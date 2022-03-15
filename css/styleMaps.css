@@ -50,12 +50,16 @@ section {
     border: 3px black solid;
 }
 
+.activeIcon {
+    border: 3px crimson solid;
+    background-color: crimson !important;
+}
+
 .menu ul li:hover {
-    -webkit-animation: change-color 3s linear 0s infinite normal;
-    -moz-animation: change-color 3s linear 0s infinite normal;
-    -ms-animation: change-color 3s linear 0s infinite normal;
-    animation: change-color 3s linear 0s infinite normal;
-    border: 3px grey solid;
+    -webkit-animation: change-color 1s linear 0s infinite normal;
+    -moz-animation: change-color 1s linear 0s infinite normal;
+    -ms-animation: change-color 1s linear 0s infinite normal;
+    animation: change-color 1s linear 0s infinite normal;
 }
 
 @-webkit-keyframes change-color {
