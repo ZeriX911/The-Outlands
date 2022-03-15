@@ -1,0 +1,68 @@
+#Container {
+    margin-top: 150px;
+    font-family: ApexLegends;
+    text-align: center;
+    color: white;
+    font-size: x-small;
+    letter-spacing: 1.5px;
+    display: block;
+    position: static;
+}
+
+#logintitle {
+    font-size: 5em;
+    text-shadow: 5px 5px 5px #000000;
+    color: white;
+    letter-spacing: 3px;
+    font-family: EA-Games;
+}
+
+table {
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+    border: 1px solid #ffffff;
+    text-align: center;
+    vertical-align: middle;
+
+}
+
+tr {
+    border-top: 1px solid white;
+    border-bottom: 1px solid white;
+}
+
+th {
+    border-bottom: 1px solid white;
+    font-size: x-large;
+    height: 50px;
+    border-collapse: collapse;
+}
+
+td {
+    font-size: large;
+    height: 50px;
+    border-collapse: collapse;
+}
+
+td:nth-child(1) {
+    border-left: 1px solid white;
+}
+
+input[type=submit],
+input[type=reset] {
+    width: 50%;
+    border: 1px solid red;
+    border-radius: 4px;
+    background-color: red;
+    color: white;
+    font-family: EA-Games;
+    font-size: large;
+}
+
+input[type=submit]:hover,
+input[type=reset]:hover {
+    background-color: #4D0000;
+    border: 1px solid #4D0000;
+    cursor: pointer;
+}
