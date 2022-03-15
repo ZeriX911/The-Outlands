@@ -51,7 +51,6 @@ section {
 }
 
 .activeIcon {
-    border: 3px crimson solid;
     background-color: crimson !important;
 }
 
