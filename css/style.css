@@ -35,7 +35,7 @@ body {
     z-index: 2;
 }
 
-li {
+#navbar li {
     float: left;
     display: inline-flex;
     width: max-content;
@@ -43,7 +43,7 @@ li {
     transform: skew(20deg);
 }
 
-li a {
+#navbar li a {
     display: block;
     color: white;
     text-align: center;
@@ -51,14 +51,14 @@ li a {
     text-decoration: none;
 }
 
-li span {
+#navbar li span {
     width: 100%;
     height: 100%;
     display: flex;
     transform: skew(-20deg);
 }
 
-li a:hover {
+#navbar li a:hover {
     background-color: #111;
 }
 
