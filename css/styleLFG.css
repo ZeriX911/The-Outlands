@@ -25,6 +25,7 @@ table {
     text-align: center;
     vertical-align: middle;
     border-collapse: collapse;
+    clear: right;
 }
 
 th {
@@ -81,6 +82,7 @@ td {
     color: white;
     font-family: EA-Games;
     font-size: large;
+    float:right;
 }
 
 #createpost:hover {
@@ -91,4 +93,6 @@ td {
 
 .cpdiv {
     padding-bottom: 30px;
+    margin-right: 13.2%;
+    margin-bottom: 3%;
 }
