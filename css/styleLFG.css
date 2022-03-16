@@ -43,8 +43,7 @@ td {
     background-color: rgba(0, 0, 0, 0.2);
 }
 
-input[type=submit],
-input[type=reset] {
+.join {
     width: 50%;
     border: 1px solid red;
     border-radius: 4px;
@@ -54,9 +53,42 @@ input[type=reset] {
     font-size: large;
 }
 
-input[type=submit]:hover,
-input[type=reset]:hover {
+.join:hover {
     background-color: #4D0000;
     border: 1px solid #4D0000;
     cursor: pointer;
+}
+
+.container {
+    display: block;
+    position: relative;
+    padding-left: 35px;
+    margin-bottom: 12px;
+    cursor: pointer;
+    font-size: 22px;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+#createpost {
+    width: 10%;
+    height: 50px;
+    border: 1px solid red;
+    border-radius: 4px;
+    background-color: red;
+    color: white;
+    font-family: EA-Games;
+    font-size: large;
+}
+
+#createpost:hover {
+    background-color: #4D0000;
+    border: 1px solid #4D0000;
+    cursor: pointer;
+}
+
+.cpdiv {
+    padding-bottom: 30px;
 }
