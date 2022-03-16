@@ -8,6 +8,8 @@
     <title>The Outlands</title>
     <link rel="stylesheet" href="../css/style.css">
     <link rel="stylesheet" href="../css/styleLFG.css">
+    <link rel="stylesheet" href="../css/styleLogin.css">
+    <link rel="stylesheet" href="../css/styleCreatePost.css">
     <link rel="icon" href="../img/apex.ico">
 </head>
 
@@ -28,7 +30,29 @@
     <main id="Container">
         <h1 id="logintitle">CREATE A POST</h1>
         <form>
-            
+            <div id="teamname-container"><label for="teamname">Team Name</label><br>
+                <input type="text" name="teamname" id="teamname">
+            </div>
+            <div id="playercount-container"><label for="playercount">Already joined players</label><br>
+                <select name="playercount" id="playercount">
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                </select>
+            </div>
+            <div id="playstyle-container"><label for="playstyle">Team playstyle</label><br>
+                <select name="playstyle" id="playstyle">
+                    <option value="competetive">Competetive</option>
+                    <option value="casual">Casual</option>
+                    <option value="toriented">Tournament Oriented</option>
+                    <option value="havingfun">Having Fun</option>
+                </select>
+            </div>
+            <div id="description-container"><label for="description">Team Description</label><br>
+                <textarea name="description" id="descriptionText" cols="100" rows="20"></textarea>
+            </div>
+            <div id="send-container">
+                <input type="submit" value="CREATE POST">
+            </div>
         </form>
     </main>
     <footer>
