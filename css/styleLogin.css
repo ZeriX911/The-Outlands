@@ -14,7 +14,10 @@ label {
     margin-top: 25px;
 }
 
-#pwd-container, #email-container, #date-container {
+#pwd-container,
+#email-container,
+#date-container,
+#pwd-verify-container {
     margin-top: 25px;
 }
 
