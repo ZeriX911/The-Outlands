@@ -101,14 +101,50 @@ section {
     margin-bottom: 10vh;
 }
 
-#br-content {
+.br-KK {
     background: url("../img/maps/Transition_Kings_Canyon.png");
 }
 
-#ar-content {
+.br-WO {
+    background: url("../img/maps/Transition_World\'s_Edge.png");
+}
+
+.br-OL {
+    background: url("../img/maps/Transition_Olympus.png");
+}
+
+.br-SP {
+    background: url("../img/maps/Transition_Storm_Point.png");
+}
+
+.ar-PC {
     background: url("../img/maps/Transition_Party_Crasher.png");
 }
 
-#spec-content {
+.ar-PR {
+    background: url("../img/maps/Transition_Phase_Runner.png");
+}
+
+.ar-OF {
+    background: url("../img/maps/Transition_Overflow.png");
+}
+
+.ar-EN {
+    background: url("../img/maps/Transition_Encore.png");
+}
+
+.ar-H4 {
+    background: url("../img/maps/Transition_Habitat_4.png");
+}
+
+.sp-FR {
+    background: url("../img/maps/Transition_Firing_Range.png");
+}
+
+.sp-KC {
+    background: url("../img/maps/Transition_Kings_Canyon_After_Dark.png");
+}
+
+.sp-WE {
     background: url("../img/maps/Transition_Winter_Express.png");
 }
