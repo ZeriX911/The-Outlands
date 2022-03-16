@@ -67,8 +67,8 @@ body {
 }
 
 .login {
-    float: right;
-    margin-right: 25px;
+    float: right !important;
+    margin-right: 25px !important;
 }
 
 #first {
