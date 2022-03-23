@@ -58,10 +58,10 @@ CREATE TABLE `posts` (
 -- Tábla szerkezet ehhez a táblához `user`
 --
 
-CREATE TABLE `user` (
-  `ID` int(255) UNSIGNED NOT NULL,
-  `uname` varchar(255) NOT NULL,
-  `passwd` varchar(255) NOT NULL,
+CREATE TABLE `users` (
+  `id` int(255) UNSIGNED NOT NULL,
+  `username` varchar(255) NOT NULL,
+  `password` varchar(255) NOT NULL,
   `birth` date NOT NULL,
   `description` varchar(255) DEFAULT NULL,
   `email` varchar(255) NOT NULL,
@@ -89,8 +89,8 @@ ALTER TABLE `posts`
 --
 -- A tábla indexei `user`
 --
-ALTER TABLE `user`
-  ADD PRIMARY KEY (`ID`);
+ALTER TABLE `users`
+  ADD PRIMARY KEY (`id`);
 
 --
 -- A kiírt táblák AUTO_INCREMENT értéke
@@ -105,8 +105,8 @@ ALTER TABLE `posts`
 --
 -- AUTO_INCREMENT a táblához `user`
 --
-ALTER TABLE `user`
-  MODIFY `ID` int(255) UNSIGNED NOT NULL AUTO_INCREMENT;
+ALTER TABLE `users`
+  MODIFY `id` int(255) UNSIGNED NOT NULL AUTO_INCREMENT;
 
 --
 -- Megkötések a kiírt táblákhoz
@@ -116,14 +116,14 @@ ALTER TABLE `user`
 -- Megkötések a táblához `msg`
 --
 ALTER TABLE `msg`
-  ADD CONSTRAINT `msg_ibfk_1` FOREIGN KEY (`sender`) REFERENCES `user` (`ID`) ON DELETE CASCADE ON UPDATE CASCADE,
-  ADD CONSTRAINT `msg_ibfk_2` FOREIGN KEY (`receiver`) REFERENCES `user` (`ID`) ON DELETE CASCADE ON UPDATE CASCADE;
+  ADD CONSTRAINT `msg_ibfk_1` FOREIGN KEY (`sender`) REFERENCES `users` (`id`) ON DELETE CASCADE ON UPDATE CASCADE,
+  ADD CONSTRAINT `msg_ibfk_2` FOREIGN KEY (`receiver`) REFERENCES `users` (`id`) ON DELETE CASCADE ON UPDATE CASCADE;
 
 --
 -- Megkötések a táblához `posts`
 --
 ALTER TABLE `posts`
-  ADD CONSTRAINT `posts_ibfk_1` FOREIGN KEY (`creator`) REFERENCES `user` (`ID`) ON DELETE CASCADE ON UPDATE CASCADE;
+  ADD CONSTRAINT `posts_ibfk_1` FOREIGN KEY (`creator`) REFERENCES `users` (`id`) ON DELETE CASCADE ON UPDATE CASCADE;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
