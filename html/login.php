@@ -101,8 +101,8 @@ if($_SERVER["REQUEST_METHOD"] == "POST") {
                             <input type="text" name="username" id="username" placeholder="Username" value="<?php echo $username ?>">
                             <span class="help-block"><?php echo $username_err; ?></span></br>
                         </div>
-                        <div id="pwd-container" <?php echo (!empty($password_err)) ? 'has-error' : ''; ?>><label for="pwd">Password</label><br>
-                            <input type="password" name="pwd" id="pwd" placeholder="Password">
+                        <div id="pwd-container" <?php echo (!empty($password_err)) ? 'has-error' : ''; ?>><label for="password">Password</label><br>
+                            <input type="password" name="password" id="password" placeholder="Password">
                             <span class="help-block"><?php echo $password_err; ?></span></br>
                         </div>
                         <div id="send-container">
