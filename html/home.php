@@ -21,7 +21,7 @@
                         <li><a href="legends.html"><span>LEGENDS</span></a></li>
                         <li><a href="maps.html"><span>MAPS</span></a></li>
                         <li><a href="lfg.html"><span>LFG</span></a></li>
-                        <li class="login"><a href="login.html"><span>LOGIN</span></a></li>
+                        <li class="login"><a href="login.php"><span>LOGIN</span></a></li>
                     </ul>
                 </nav>
             </header>

@@ -97,11 +97,13 @@ if($_SERVER["REQUEST_METHOD"] == "POST") {
                 <fieldset>
                     <main id="Container">
                         <h1 id="logintitle">Login</h1>
-                        <div id="username-container"><label for="email">Username</label><br>
+                        <div id="username-container" <? echo (!empty($username_err)) ? 'has-error' : '';?>><label for="email">Username</label><br>
                             <input type="text" name="username" id="username" placeholder="Username" value="<?php echo $username ?>">
+                            <span class="help-block"><?php echo $username_err; ?></span></br>
                         </div>
-                        <div id="pwd-container"><label for="pwd">Password</label><br>
+                        <div id="pwd-container" <?php echo (!empty($password_err)) ? 'has-error' : ''; ?>><label for="pwd">Password</label><br>
                             <input type="password" name="pwd" id="pwd" placeholder="Password">
+                            <span class="help-block"><?php echo $password_err; ?></span></br>
                         </div>
                         <div id="send-container">
                             <input type="submit" value="LOGIN">
