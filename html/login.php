@@ -93,12 +93,12 @@ if($_SERVER["REQUEST_METHOD"] == "POST") {
                     </ul>
                 </nav>
             </header>
-            <form>
+            <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>" method="post">
                 <fieldset>
                     <main id="Container">
                         <h1 id="logintitle">Login</h1>
-                        <div id="email-container"><label for="email">E-mail</label><br>
-                            <input type="email" name="email" id="email" placeholder="E-mail">
+                        <div id="username-container"><label for="email">Username</label><br>
+                            <input type="text" name="username" id="username" placeholder="Username" value="<?php echo $username ?>">
                         </div>
                         <div id="pwd-container"><label for="pwd">Password</label><br>
                             <input type="password" name="pwd" id="pwd" placeholder="Password">
