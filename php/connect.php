@@ -4,7 +4,7 @@
 
     if($connect -> errno !=0)
     {
-        die("Hiba! ".$connect -> error);
+        die("Error! ".$connect -> error);
     }
     if(!$connect -> set_charset("utf8"))
     {
