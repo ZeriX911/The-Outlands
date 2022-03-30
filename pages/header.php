@@ -4,12 +4,13 @@
             <li id="first"><a id="home" href="index.php"><span>HOME</span></a></li>
             <li><a id="legends" href="legends.php"><span>LEGENDS</span></a></li>
             <li><a id="maps" href="maps.php"><span>MAPS</span></a></li>
-            <li><a id="lfg" href="lfg.php"><span>LFG</span></a></li>
+            
             <?php if( !isset($_SESSION["username"]) ){
             ?>
             <li class="last"><a id="login" href="login.php"><span>LOGIN</span></a></li>
             <?php } else {
             ?>
+            <li><a id="lfg" href="lfg.php"><span>LFG</span></a></li>
             <li class="last"><a id="profile" href="profile.php"><span>PROFILE</span></a></li>
             <?php }
             ?>   
@@ -17,7 +18,6 @@
     </nav>
 </header>
 <script>
-    //alert(window.location.pathname);
     switch (window.location.pathname) {
         case "/pages/legends.php":
             active('legends');
