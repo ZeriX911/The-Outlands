@@ -87,7 +87,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST") {
                 <fieldset>
                     <main id="Container">
                         <h1 id="logintitle">Login</h1>
-                        <div id="username-container" <? echo (!empty($username_err)) ? 'has-error' : '';?>><label for="email">Username</label><br>
+                        <div id="username-container" <?php echo (!empty($username_err)) ? 'has-error' : '';?>> <label for="email">Username</label><br>
                             <input type="text" name="username" id="username" placeholder="Username" value="<?php echo $username ?>">
                             <span class="help-block"><?php echo $username_err; ?></span></br>
                         </div>
@@ -98,11 +98,12 @@ if($_SERVER["REQUEST_METHOD"] == "POST") {
                         <div id="send-container">
                             <input type="submit" value="LOGIN">
                         </div>
-                        <div id="registerhere">You don't have an account? Register <a href="register.html"><strong>here</strong></a></div>
+                        <div id="registerhere">You don't have an account? Register <a href="register.php"><strong>here</strong></a></div>
                     </main>
                 </fieldset>
             </form>
             <footer>
+              
                 <p>The Outlands Official Project</p>
             </footer>
         </div>

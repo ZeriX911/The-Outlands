@@ -5,7 +5,14 @@
             <li><a id="legends" href="legends.php"><span>LEGENDS</span></a></li>
             <li><a id="maps" href="maps.php"><span>MAPS</span></a></li>
             <li><a id="lfg" href="lfg.php"><span>LFG</span></a></li>
-            <li class="login"><a id="login" href="login.php"><span>LOGIN</span></a></li>
+            <?php if( !isset($_SESSION["username"]) ){
+            ?>
+            <li class="last"><a id="login" href="login.php"><span>LOGIN</span></a></li>
+            <?php } else {
+            ?>
+            <li class="last"><a id="profile" href="profile.php"><span>PROFILE</span></a></li>
+            <?php }
+            ?>   
         </ul>
     </nav>
 </header>
@@ -23,6 +30,9 @@
             break;
         case "/pages/login.php":
             active('login');
+            break;
+        case "/pages/profile.php":
+            active('profile');
             break;
         default:
             active('home');
