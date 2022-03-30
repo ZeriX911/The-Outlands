@@ -126,13 +126,13 @@ aside[id=legends] {
 td {
     height: 89px;
     width: 150px;
-    display: inline-flex;
+    display: inline-flex !important;
     transform: skew(20deg);
-    border: 2px solid grey;
-    margin: 2px;
-    cursor: pointer;
-    background-size: cover;
-    background-repeat: no-repeat;
+    border: 2px solid grey !important;
+    margin: 2px !important;
+    cursor: pointer !important;
+    background-size: cover !important;
+    background-repeat: no-repeat !important;
     color: black;
 }
 
@@ -169,101 +169,101 @@ a:active {
 }
 
 #BHD {
-    background: red url('../img/legends/BLO.png') no-repeat fixed center;
-    background-size: 150px 89px;
+    background: red url('../img/legends/BLO.png') no-repeat fixed center !important;
+    background-size: 150px 89px !important;
 }
 
 #GIB {
-    background: brown url('../img/legends/GIB.png') no-repeat fixed center;
-    background-size: 150px 89px;
+    background: brown url('../img/legends/GIB.png') no-repeat fixed center !important;
+    background-size: 150px 89px !important;
 }
 
 #LIF {
-    background: purple url('../img/legends/LIF.png') no-repeat fixed center;
-    background-size: 150px 89px;
+    background: purple url('../img/legends/LIF.png') no-repeat fixed center !important;
+    background-size: 150px 89px !important;
 }
 
 #PAT {
-    background: blue url('../img/legends/PAT.png') no-repeat fixed center;
-    background-size: 150px 89px;
+    background: blue url('../img/legends/PAT.png') no-repeat fixed center !important;
+    background-size: 150px 89px !important;
 }
 
 #WRA {
-    background: purple url('../img/legends/WRA.png') no-repeat fixed center;
-    background-size: 150px 89px;
+    background: purple url('../img/legends/WRA.png') no-repeat fixed center !important;
+    background-size: 150px 89px !important;
 }
 
 #BAN {
-    background: red url('../img/legends/BAN.png') no-repeat fixed center;
-    background-size: 150px 89px;
+    background: red url('../img/legends/BAN.png') no-repeat fixed center !important;
+    background-size: 150px 89px !important;
 }
 
 #CAU {
-    background: brown url('../img/legends/CAU.png') no-repeat fixed center;
-    background-size: 150px 89px;
+    background: brown url('../img/legends/CAU.png') no-repeat fixed center !important;
+    background-size: 150px 89px !important;
 }
 
 #MIR {
-    background: burlywood url('../img/legends/MIR.png') no-repeat fixed center;
-    background-size: 150px 89px;
+    background: burlywood url('../img/legends/MIR.png') no-repeat fixed center !important;
+    background-size: 150px 89px !important;
 }
 
 #OCT {
-    background: greenyellow url('../img/legends/OCT.png') no-repeat fixed center;
-    background-size: 150px 89px;
+    background: greenyellow url('../img/legends/OCT.png') no-repeat fixed center !important;
+    background-size: 150px 89px !important;
 }
 
 #WAT {
-    background: blue url('../img/legends/WAT.png') no-repeat fixed center;
-    background-size: 150px 89px;
+    background: blue url('../img/legends/WAT.png') no-repeat fixed center !important;
+    background-size: 150px 89px !important;
 }
 
 #CRY {
-    background: blue url('../img/legends/CRY.png') no-repeat fixed center;
-    background-size: 150px 89px;
+    background: blue url('../img/legends/CRY.png') no-repeat fixed center !important;
+    background-size: 150px 89px !important;
 }
 
 #REV {
-    background: green url('../img/legends/REV.png') no-repeat fixed center;
-    background-size: 150px 89px;
+    background: green url('../img/legends/REV.png') no-repeat fixed center !important;
+    background-size: 150px 89px !important;
 }
 
 #LOB {
-    background: burlywood url('../img/legends/LOB.png') no-repeat fixed center;
-    background-size: 150px 89px;
+    background: burlywood url('../img/legends/LOB.png') no-repeat fixed center !important;
+    background-size: 150px 89px !important;
 }
 
 #RAM {
-    background: pink url('../img/legends/RAM.png') no-repeat fixed center;
-    background-size: 150px 89px;
+    background: pink url('../img/legends/RAM.png') no-repeat fixed center !important;
+    background-size: 150px 89px !important;
 }
 
 #HOR {
-    background: blue url('../img/legends/HOR.png') no-repeat fixed center;
-    background-size: 150px 89px;
+    background: blue url('../img/legends/HOR.png') no-repeat fixed center !important;
+    background-size: 150px 89px !important;
 }
 
 #FUS {
-    background: orangered url('../img/legends/FUS.png') no-repeat fixed center;
-    background-size: 150px 89px;
+    background: orangered url('../img/legends/FUS.png') no-repeat fixed center !important;
+    background-size: 150px 89px !important;
 }
 
 #VAL {
-    background: purple url('../img/legends/VAL.png') no-repeat fixed center;
-    background-size: 150px 89px;
+    background: purple url('../img/legends/VAL.png') no-repeat fixed center !important;
+    background-size: 150px 89px !important;
 }
 
 #SEE {
-    background: lightblue url('../img/legends/SEE.png') no-repeat fixed center;
-    background-size: 150px 89px;
+    background: lightblue url('../img/legends/SEE.png') no-repeat fixed center !important;
+    background-size: 150px 89px !important;
 }
 
 #ASH {
-    background: aqua url('../img/legends/ASH.png') no-repeat fixed center;
-    background-size: 150px 89px;
+    background: aqua url('../img/legends/ASH.png') no-repeat fixed center !important;
+    background-size: 150px 89px !important;
 }
 
 #MMG {
-    background: yellow url('../img/legends/MMG.png') no-repeat fixed center;
-    background-size: 150px 89px;
+    background: yellow url('../img/legends/MMG.png') no-repeat fixed center !important;
+    background-size: 150px 89px !important;
 }

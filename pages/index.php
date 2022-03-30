@@ -14,17 +14,7 @@
 <body>
     <div id="page-container">
         <div id="content-wrap">
-            <header>
-                <nav>
-                    <ul id="navbar">
-                        <li id="first"><a class="active" href="#"><span>HOME</span></a></li>
-                        <li><a href="legends.html"><span>LEGENDS</span></a></li>
-                        <li><a href="maps.html"><span>MAPS</span></a></li>
-                        <li><a href="lfg.html"><span>LFG</span></a></li>
-                        <li class="login"><a href="login.php"><span>LOGIN</span></a></li>
-                    </ul>
-                </nav>
-            </header>
+            <?php include('header.php');?>
             <main id="main">
                 <img id="splash" alt="nemszeretekaltotadnidemuszajszovalittvannesze" src="../img/splash.jpg">
                 <a href="#helo"><button  id="mainbutton">Continue</button></a>

@@ -90,8 +90,8 @@ section {
 }
 
 .content {
-    background-repeat: no-repeat;
-    background-position: right;
+    background-repeat: no-repeat !important;
+    background-size: cover !important;
     margin: 10px;
     height: 78vh;
     background-color: black;

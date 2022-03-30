@@ -16,27 +16,7 @@
 <body>
     <div id="page-container">
         <div id="content-wrap">
-            <header>
-                <nav>
-                    <ul id="navbar">
-                        <li id="first">
-                            <a href="home.html"><span>HOME</span></a>
-                        </li>
-                        <li>
-                            <a class="active" href="#"><span>LEGENDS</span></a>
-                        </li>
-                        <li>
-                            <a href="maps.html"><span>MAPS</span></a>
-                        </li>
-                        <li>
-                            <a href="lfg.html"><span>LFG</span></a>
-                        </li>
-                        <li class="login">
-                            <a href="login.html"><span>LOGIN</span></a>
-                        </li>
-                    </ul>
-                </nav>
-            </header>
+        <?php include('header.php');?>
             <aside id="legends">
                 <div id="table-wrapper">
                     <div id="legends-head">

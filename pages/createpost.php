@@ -17,17 +17,7 @@
 <body>
     <div id="page-container">
         <div id="content-wrap">
-            <header>
-                <nav>
-                    <ul id="navbar">
-                        <li id="first"><a href="home.html"><span>HOME</span></a></li>
-                        <li><a href="legends.html"><span>LEGENDS</span></a></li>
-                        <li><a href="maps.html"><span>MAPS</span></a></li>
-                        <li><a class="active" href="#"><span>LFG</span></a></li>
-                        <li class="login"><a href="login.html"><span>LOGIN</span></a></li>
-                    </ul>
-                </nav>
-            </header>
+        <?php include('header.php');?>
             <main id="Container">
                 <h1 id="logintitle">CREATE A POST</h1>
                 <form>

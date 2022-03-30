@@ -6,9 +6,10 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>The Outlands</title>
+
+    <link rel="stylesheet" media="print" href="../css/stylePrint.css" />
     <link rel="stylesheet" href="../css/style.css">
     <link rel="stylesheet" href="../css/styleMaps.css">
-    <link rel="stylesheet" media="print" href="../css/stylePrint.css" />
     <link rel="icon" href="../img/apex.ico">
     <script src="../scripts/maps.js"></script>
 </head>
@@ -16,17 +17,7 @@
 <body>
     <div id="page-container">
         <div id="content-wrap">
-            <header>
-                <nav>
-                    <ul id="navbar">
-                        <li id="first"><a href="home.html"><span>HOME</span></a></li>
-                        <li><a href="legends.html"><span>LEGENDS</span></a></li>
-                        <li><a class="active" href="#"><span>MAPS</span></a></li>
-                        <li><a href="lfg.html"><span>LFG</span></a></li>
-                        <li class="login"><a href="login.html"><span>LOGIN</span></a></li>
-                    </ul>
-                </nav>
-            </header>
+        <?php include('header.php');?>
 
             <main>
                 <section id="br-section">
