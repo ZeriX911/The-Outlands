@@ -1,0 +1,14 @@
+1.)Regisztrációnál és loginnál a hibaüzenetek láthatóbbá tétele (pl. betűtípus átállításával)
+
+
+2.) Profile oldal létrehozása:
+        -név szerkesztés
+        -jelszó szerkesztés
+        -email hozzáadás
+        -leírás hozzáadás
+        -kép feltöltése
+        -jelenlegi csapat megjelenítése
+        -logout gomb
+
+3.) Logout még nincs kész, arra gondoltam, hogy minnél kevesebbet kelljen baszakodni,
+    hogy szimplán basszuk rá a profile oldalra, azt úgy is csak akkor tudod elérni ha be vagy lépve.
