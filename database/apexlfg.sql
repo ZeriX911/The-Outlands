@@ -66,6 +66,7 @@ CREATE TABLE `users` (
   `description` varchar(255) DEFAULT NULL,
   `email` varchar(255) NOT NULL,
   `pic` blob NOT NULL
+  `admin` tinyint(1) DEFAULT NULL,
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
