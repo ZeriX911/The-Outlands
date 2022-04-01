@@ -5,14 +5,14 @@
             <li><a id="legends" href="legends.php"><span>LEGENDS</span></a></li>
             <li><a id="maps" href="maps.php"><span>MAPS</span></a></li>
             
-            <?php if( !isset($_SESSION["username"]) ){
-            ?>
-            <li class="last"><a id="login" href="login.php"><span>LOGIN</span></a></li>
-            <?php } else {
-            ?>
-            <li><a id="lfg" href="lfg.php"><span>LFG</span></a></li>
-            <li class="last"><a id="profile" href="profile.php"><span>PROFILE</span></a></li>
-            <?php }
+            <?php if(!isset($_SESSION["username"]) ){
+                echo "<li class='last'><a id='login' href='login.php'><span>LOGIN</span></a></li>";
+            }
+            else
+            {
+                echo "<li><a id='lfg' href='lfg.php'><span>LFG</span></a></li>";
+                echo "<li class='last'><a id='profile' href='profile.php'><span>PROFILE</span></a></li>";
+            }
             ?>   
         </ul>
     </nav>
