@@ -5,7 +5,7 @@
             <li><a id="legends" href="legends.php"><span>LEGENDS</span></a></li>
             <li><a id="maps" href="maps.php"><span>MAPS</span></a></li>
             
-            <?php if(!isset($_SESSION["username"]) ){
+            <?php if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
                 echo "<li class='last'><a id='login' href='login.php'><span>LOGIN</span></a></li>";
             }
             else
