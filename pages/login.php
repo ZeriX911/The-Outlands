@@ -46,7 +46,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST") {
               $_SESSION["id"] = $id;
               $_SESSION["username"] = $username;
   
-              header("location: home.php");
+              header("location: index.php");
             } else {
               $password_err = "The password you entered is not valid";
             }
