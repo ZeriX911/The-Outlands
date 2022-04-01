@@ -59,15 +59,15 @@ CREATE TABLE `posts` (
 --
 
 CREATE TABLE `users` (
-  `id` int(255) UNSIGNED NOT NULL,
+  `id` int(255) UNSIGNED NOT NULL AUTO_INCREMENT,
   `username` varchar(255) NOT NULL,
   `password` varchar(255) NOT NULL,
-  `birth` date NOT NULL,
+  `birth` date DEFAULT NULL,
   `description` varchar(255) DEFAULT NULL,
-  `email` varchar(255) NOT NULL,
-  `pic` blob NOT NULL,
+  `email` varchar(255) DEFAULT NULL,
+  `pic` blob DEFAULT NULL,
   `admin` tinyint(1) DEFAULT NULL,
-  `currentteam` varchar(255) NOT NULL
+  `currentteam` varchar(255) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --

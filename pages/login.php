@@ -88,11 +88,11 @@ if($_SERVER["REQUEST_METHOD"] == "POST") {
                     <main id="Container">
                         <h1 id="logintitle">Login</h1>
                         <div id="username-container" <?php echo (!empty($username_err)) ? 'has-error' : '';?>> <label for="email">Username</label><br>
-                            <input type="text" name="username" id="username" placeholder="Username" value="<?php echo $username ?>">
+                            <input type="text" name="username" id="username" placeholder="Username" value="<?php echo $username ?>"><br>
                             <span class="help-block"><?php echo $username_err; ?></span></br>
                         </div>
                         <div id="pwd-container" <?php echo (!empty($password_err)) ? 'has-error' : ''; ?>><label for="password">Password</label><br>
-                            <input type="password" name="password" id="password" placeholder="Password">
+                            <input type="password" name="password" id="password" placeholder="Password"><br>
                             <span class="help-block"><?php echo $password_err; ?></span></br>
                         </div>
                         <div id="send-container">
