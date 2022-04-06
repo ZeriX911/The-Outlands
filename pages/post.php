@@ -2,11 +2,11 @@
 require_once('connect.php');
 
 class Post{
-    private const $createor_id;
-    private const $team_name;
-    private const $players;
-    private const $style;
-    private const $desc;
+    private  $creator_id;
+    private  $team_name;
+    private  $players;
+    private  $style;
+    private  $desc;
 
     function __construct($team_name,$players,$style,$desc){
         $this->creator_id = $_SESSION['id'];
@@ -53,6 +53,7 @@ if (isset($_POST['form'])) {
     $desc = $_POST['description'];
    $post = new Post($team_name,$players,$style,$desc);
    send_post($post);
+   var_dump("hello");
 }
 
 ?>
