@@ -34,15 +34,16 @@ if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] === false) {
 
                         require_once('connect.php');
 
-                        $numberofgames = "SELECT count(*) FROM games";
-                        $resultnog = $connect ->query($numberofgames);
-                        if($resultnog)
+                        $query = "SELECT username, email, currenteam, birth FROM users";
+                        $resultq = $connect ->query($query);
+                        if($resultq)
                         {
-                          while($row = $resultnog -> fetch_array())
+                          while($row = $resultq -> fetch_array())
                           {
-                            echo "<p class='mainli'>Number Of Games: {$row[0]}<span id='nubmerofgames'></span></p>";
-                            echo "<div id='username-container'><label for='myusername'>Username: {$row[0]}</label><br>"
-            
+                            echo "<div id='username-container'><label for='myusername'>Username: {$row[0]}</label><br>";
+                            echo "<div id='username-container'><label for='myusername'>E-mail: {$row[1]}</label><br>";
+                            echo "<div id='username-container'><label for='myusername'>Current team: {$row[2]}</label><br>";
+                            echo "<div id='username-container'><label for='myusername'>Birth: {$row[3]}</label><br>";
                           }
                         }
 
@@ -68,7 +69,7 @@ if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] === false) {
                         <textarea name="description" id="descriptionText" cols="100" rows="20" placeholder="Description"></textarea>
                     </div>-->
                     <div id="send-container">
-                        <input type="submit" value="CREATE POST">
+                        <input type="submit" value="LOGOUT" href="logout.php">
                     </div>
                 </form>
             </main>
