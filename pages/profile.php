@@ -19,6 +19,7 @@ if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] === false) {
     <link rel="stylesheet" href="../css/styleLFG.css">
     <link rel="stylesheet" href="../css/styleLogin.css">
     <link rel="stylesheet" href="../css/styleCreatePost.css">
+    <link re="stylesheet" href="../css/styleProfile.css">
     <link rel="stylesheet" media="print" href="../css/stylePrint.css" />
     <link rel="icon" href="../img/apex.ico">
 </head>
@@ -34,42 +35,31 @@ if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] === false) {
 
                         require_once('connect.php');
 
-                        $query = "SELECT username, email, currenteam, birth FROM users";
+                        $query = "SELECT username, email, currentteam, birth FROM users";
                         $resultq = $connect ->query($query);
                         if($resultq)
                         {
                           while($row = $resultq -> fetch_array())
                           {
-                            echo "<div id='username-container'><label for='myusername'>Username: {$row[0]}</label><br>";
-                            echo "<div id='username-container'><label for='myusername'>E-mail: {$row[1]}</label><br>";
-                            echo "<div id='username-container'><label for='myusername'>Current team: {$row[2]}</label><br>";
-                            echo "<div id='username-container'><label for='myusername'>Birth: {$row[3]}</label><br>";
+                            
+                            if($row[1] == NULL){$row[1] = "not set";}
+                            if($row[2] == NULL){$row[2] = "not set";}
+                            if($row[3] == NULL){$row[3] = "not set";}
+                            
+                            echo "<div id='username-container'><label for='myusername' class='profquery'>Username: {$row[0]}</label><br>";
+                            echo "<div id='username-container'><label for='myemail' class='profquery'>E-mail: {$row[1]}</label><br>";
+                            echo "<div id='username-container'><label for='myteam' class='profquery'>Current team: {$row[2]}</label><br>";
+                            echo "<div id='username-container'><label for='mybirth' class='profquery'>Birth: {$row[3]}</label><br>";
                           }
                         }
 
+                        function RemoveUser()
+                        {
+                            
+                        }
                     ?>
-                    <!--<div id="teamname-container"><label for="teamname">Team Name</label><br>
-                        <input type="text" name="teamname" id="teamname" placeholder="Team name">
-                    </div>
-                    <div id="playercount-container"><label for="playercount">Already joined players</label><br>
-                        <select name="playercount" id="playercount">
-                    <option value="1">1</option>
-                    <option value="2">2</option>
-                </select>
-                    </div>
-                    <div id="playstyle-container"><label for="playstyle">Team playstyle</label><br>
-                        <select name="playstyle" id="playstyle">
-                    <option value="competetive">Competetive</option>
-                    <option value="casual">Casual</option>
-                    <option value="toriented">Tournament Oriented</option>
-                    <option value="havingfun">Having Fun</option>
-                </select>
-                    </div>
-                    <div id="description-container"><label for="descriptionText">Team Description</label><br>
-                        <textarea name="description" id="descriptionText" cols="100" rows="20" placeholder="Description"></textarea>
-                    </div>-->
                     <div id="send-container">
-                        <input type="submit" value="LOGOUT" href="logout.php">
+                        <input type="button" id="logoutbutton" onclick="location.href='logout.php'" value="LOGOUT">
                     </div>
                 </form>
             </main>
