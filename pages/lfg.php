@@ -28,7 +28,7 @@ if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] === false) {
             <main id="Container">
                 <h1 id="logintitle">Looking For Team</h1>
                 <div class="send-container cpdiv">
-                    <a href="createpost.html">
+                    <a href="createpost.php">
                         <input type="submit" value="CREATE A POST" id="createpost">
                     </a>
                 </div>
