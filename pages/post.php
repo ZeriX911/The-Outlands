@@ -42,8 +42,7 @@ function get_posts(){
 function send_post(Post $post){
     $db='apexlfg';
     $query = "INSERT INTO `posts`( `creator`, `team_name`, `current_players`, `playstyle`, `description`) VALUES ('".$post->get_creator_id()."','".$post->get_team_name()."','".$post->get_players()."','".$post->get_style()."','".$post->get_desc()."')";
-    $smt = $connect->prepare($query);
-    $smt->execute();
+    $connect->query($query);
     $connect->close();
 }
 
