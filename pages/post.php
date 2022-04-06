@@ -1,6 +1,5 @@
 <?php
 global $connect;
-var_dump($connect);
 
 class Post{
     private  $creator_id;
