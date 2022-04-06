@@ -58,7 +58,8 @@ input[type=date] {
 }
 
 input[type=submit],
-input[type=reset] {
+input[type=reset],
+input[type=button] {
     width: 20%;
     border: 1px solid red;
     border-radius: 4px;
@@ -71,7 +72,8 @@ input[type=reset] {
 }
 
 input[type=submit]:hover,
-input[type=reset]:hover {
+input[type=reset]:hover,
+input[type=button]:hover {
     background-color: #4D0000;
     border: 1px solid #4D0000;
     cursor: pointer;
