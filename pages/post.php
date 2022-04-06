@@ -1,6 +1,5 @@
 <?php
-global $connect;
-
+$list = array();
 class Post{
     private  $creator_id;
     private  $team_name;
@@ -35,7 +34,15 @@ class Post{
 }
 
 function get_posts(){
-    
+    global $connect;
+    global $list;
+    $query = "SELECT * from posts";
+    $res = $connect->query($query);
+    while($row = $res->fetch_row())
+    {
+        array_push($list, new Post($row[2],$row[3],$row[4],$row[5]));
+    }
+
 }
 
 function send_post(Post $post){

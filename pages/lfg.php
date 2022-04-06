@@ -5,6 +5,9 @@ if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] === false) {
   header("Location: /pages/index.php");
   exit;
 }
+include_once('connect.php');
+include_once('post.php');
+get_posts();
 ?>
 
 <!DOCTYPE html>
@@ -36,35 +39,14 @@ if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] === false) {
                     <tr>
                         <th colspan="4">Avilable teams</th>
                     </tr>
+                    <?php foreach($list as $post){ ?>
                     <tr class="team">
-                        <td>Test Team</td>
-                        <td>1/3</td>
-                        <td>Competetive</td>
+                        <td><?php echo $post->get_team_name()  ?></td>
+                        <td><?php echo $post->get_players() ?>/3</td>
+                        <td><?php echo $post->get_style() ?></td>
                         <td class="send-container"><input type="submit" value="JOIN" class="join"></td>
                     </tr>
-                    <tr class="team">
-                        <td>Test Team</td>
-                        <td>1/3</td>
-                        <td>Competetive</td>
-                        <td class="send-container"><input type="submit" value="JOIN" class="join"></td>
-                    </tr>
-                    <tr class="team">
-                        <td>Test Team</td>
-                        <td>1/3</td>
-                        <td>Competetive</td>
-                        <td class="send-container"><input type="submit" value="JOIN" class="join"></td>
-                    </tr>
-                    <tr class="team">
-                        <td>Test Team</td>
-                        <td>1/3</td>
-                        <td>Competetive</td>
-                        <td class="send-container"><input type="submit" value="JOIN" class="join"></td>
-                    </tr>
-                    <tr class="team">
-                        <td>Test Team</td>
-                        <td>1/3</td>
-                        <td>Competetive</td>
-                        <td class="send-container"><input type="submit" value="JOIN" class="join"></td>
+                    <?php } ?>
                     </tr>
                 </table>
             </main>
