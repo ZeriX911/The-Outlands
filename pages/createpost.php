@@ -5,6 +5,12 @@ if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] === false) {
   header("Location: /pages/index.php");
   exit;
 }
+
+require_once('connect.php');
+require_once('post.php');
+
+
+
 ?>
 
 <!DOCTYPE html>
@@ -29,7 +35,7 @@ if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] === false) {
         <?php include('header.php');?>
             <main id="Container">
                 <h1 id="logintitle">CREATE A POST</h1>
-                <form>
+                <form method="POST" action="createpost.php">
                     <div id="teamname-container"><label for="teamname">Team Name</label><br>
                         <input type="text" name="teamname" id="teamname" placeholder="Team name">
                     </div>
@@ -51,7 +57,7 @@ if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] === false) {
                         <textarea name="description" id="descriptionText" cols="100" rows="20" placeholder="Description"></textarea>
                     </div>
                     <div id="send-container">
-                        <input type="submit" value="CREATE POST">
+                        <input type="submit" name="form" value="CREATE POST">
                     </div>
                 </form>
             </main>
