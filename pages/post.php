@@ -1,6 +1,6 @@
 <?php
+global $connect;
 var_dump($connect);
-require_once("connect.php");
 
 class Post{
     private  $creator_id;
@@ -40,10 +40,14 @@ function get_posts(){
 }
 
 function send_post(Post $post){
+    global $connect;
     $db='apexlfg';
     $query = "INSERT INTO `posts`( `creator`, `team_name`, `current_players`, `playstyle`, `description`) VALUES ('".$post->get_creator_id()."','".$post->get_team_name()."','".$post->get_players()."','".$post->get_style()."','".$post->get_desc()."')";
     $connect->query($query);
     $connect->close();
+    header("Location: /pages/lfg.php");
+    exit;
+    
 }
 
 if (isset($_POST['form'])) {
