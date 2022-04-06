@@ -84,8 +84,8 @@ if($_SERVER["REQUEST_METHOD"] == "POST") {
         <div id="content-wrap">
         <?php include('header.php');?>
             <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>" method="post">
-                <fieldset>
                     <main id="Container">
+                    <fieldset>
                         <h1 id="logintitle">Login</h1>
                         <div id="username-container" <?php echo (!empty($username_err)) ? 'has-error' : '';?>> <label for="email">Username</label><br>
                             <input type="text" name="username" id="username" placeholder="Username" value="<?php echo $username ?>"><br>
@@ -99,8 +99,8 @@ if($_SERVER["REQUEST_METHOD"] == "POST") {
                             <input type="submit" value="LOGIN">
                         </div>
                         <div id="registerhere">You don't have an account? Register <a href="register.php"><strong>here</strong></a></div>
+                      </fieldset>
                     </main>
-                </fieldset>
             </form>
             <footer>
               
