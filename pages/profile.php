@@ -30,13 +30,14 @@ if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] === false) {
         <?php include('header.php');?>
             <main id="Container">
                 <h1 id="logintitle">PROFILE</h1>
-                <form>
+                <form method="post">
                     <?php
 
                         require_once('connect.php');
 
-                        $query = "SELECT username, email, currentteam, birth FROM users";
-                        $resultq = $connect ->query($query);
+                        $uname = $_SESSION["username"];
+                        $query = "SELECT username, email, currentteam, birth FROM users WHERE username=$uname";
+                        $resultq = $connect -> query($query);
                         if($resultq)
                         {
                           while($row = $resultq -> fetch_array())
@@ -52,14 +53,12 @@ if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] === false) {
                             echo "<div id='username-container'><label for='mybirth' class='profquery'>Birth: {$row[3]}</label><br>";
                           }
                         }
-
-                        function RemoveUser()
-                        {
-                            
-                        }
                     ?>
                     <div id="send-container">
                         <input type="button" id="logoutbutton" onclick="location.href='logout.php'" value="LOGOUT">
+                    </div>
+                    <div id="send-container">
+                        <input type="button" id="removeacc" onclick="location.href='removeprofile.php'" value="DELETE ACCOUNT">
                     </div>
                 </form>
             </main>
