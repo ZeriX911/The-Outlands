@@ -108,7 +108,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
                         <!--<div id="email-container"><label for="email">E-mail</label><br>
                             <input type="email" name="email" id="email" placeholder="E-mail">
                         </div>-->
-                        <div id="pwd-container <?php echo (!empty($password_err)) ? 'has-error' : ''; ?>"><label for="password">Password</label><br>
+                        <div id="pwd-container <?php echo (!empty($password_err)) ? 'has-error' : ''; ?>"><label for="password">Password (min. 6. characters)</label><br>
                             <input type="password" name="password" id="password" placeholder="Password" value="<?php echo $password; ?>"></br>
                             <span class="help-block"><?php echo $password_err; ?></span><br>
                         </div>

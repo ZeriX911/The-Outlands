@@ -80,6 +80,8 @@ input[type=reset]:hover {
 .help-block {
     font-family: Arial, Helvetica, sans-serif;
     padding-top: 2%;
+    padding-bottom: 2%;
+    font-size: medium;
 }
 
 
