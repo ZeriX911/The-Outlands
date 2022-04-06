@@ -1,5 +1,6 @@
 <?php
-require_once('connect.php');
+var_dump($connect);
+require_once("connect.php");
 
 class Post{
     private  $creator_id;
@@ -15,6 +16,9 @@ class Post{
         $this->style = $style;
         $this->desc = $desc;
         return $this;
+    }
+    function get_creator_id(){
+        return $this->creator_id;
     }
     function get_team_name(){
         return $this->team_name;
@@ -37,13 +41,10 @@ function get_posts(){
 
 function send_post(Post $post){
     $db='apexlfg';
-    $query = "INSERT INTO `posts`( `creator`, `team_name`, `current_players`, `playstyle`, `description`) VALUES ('".$post->createor_id."','".$post->team_name."','".$post->players."','".$post->style."','".$post->desc."')";
-    if(mysql_db_query($db,$query)){
-        header("Location: /pages/lfg.php");
-    }else{
-        header("Location: /pages/createpost.php");
-    }
-
+    $query = "INSERT INTO `posts`( `creator`, `team_name`, `current_players`, `playstyle`, `description`) VALUES ('".$post->get_creator_id()."','".$post->get_team_name()."','".$post->get_players()."','".$post->get_style()."','".$post->get_desc()."')";
+    $smt = $connect->prepare($query);
+    $smt->execute();
+    $connect->close();
 }
 
 if (isset($_POST['form'])) {
