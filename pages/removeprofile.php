@@ -4,8 +4,8 @@ session_start();
 
 require_once('connect.php');
 
-$uname = $_SESSION["username"];
-$query1 = "DELETE FROM users WHERE username=$uname";
+$uname = $_SESSION["id"];
+$query1 = "DELETE FROM users WHERE id=$uname";
 
 $result1 = $connect -> query($query1);
 if($result1) { echo "Account deleted successfully"; }
