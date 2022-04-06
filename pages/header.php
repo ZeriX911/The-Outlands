@@ -6,14 +6,21 @@
             <li><a id="maps" href="maps.php"><span>MAPS</span></a></li>
             
             <?php if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
-                echo "<li class='last'><a id='login' href='login.php'><span>LOGIN</span></a></li>";
+            ?> 
+            
+            <li class='last'><a id='login' href='login.php'><span>LOGIN</span></a></li>
+            
+            <?php 
             }
             else
             {
-                echo "<li><a id='lfg' href='lfg.php'><span>LFG</span></a></li>";
-                echo "<li class='last'><a id='profile' href='profile.php'><span>PROFILE</span></a></li>";
+            ?> 
+            <li><a id='lfg' href='lfg.php'><span>LFG</span></a></li>
+            <li class='last'><a id='profile' href='profile.php'><span>PROFILE</span></a></li>
+            <?php
             }
-            ?>   
+            ?>
+              
         </ul>
     </nav>
 </header>

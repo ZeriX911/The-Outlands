@@ -23,7 +23,7 @@ session_start();
             <?php include('header.php');?>
             <main id="main">
                 <img id="splash" alt="nemszeretekaltotadnidemuszajszovalittvannesze" src="../img/splash.jpg">
-                <a href="#helo"><button  id="mainbutton">Continue</button></a>
+                <button onclick="document.getElementById('helo').scrollIntoView()"  id="mainbutton">Continue</button>
                 <div id="helo"></div>
                 <h1 id="maintitle">THE OUTLANDS</h1>
                 <article id="mainarticle">
