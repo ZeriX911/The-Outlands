@@ -1,5 +1,5 @@
 <?php
-$list = array();
+$posts= array();
 class Post{
     private  $creator_id;
     private  $team_name;
@@ -35,12 +35,14 @@ class Post{
 
 function get_posts(){
     global $connect;
-    global $list;
+    global $posts
+    ;
     $query = "SELECT * from posts";
     $res = $connect->query($query);
     while($row = $res->fetch_row())
     {
-        array_push($list, new Post($row[2],$row[3],$row[4],$row[5]));
+        array_push($posts
+        , new Post($row[2],$row[3],$row[4],$row[5]));
     }
 
 }
@@ -49,10 +51,17 @@ function send_post(Post $post){
     global $connect;
     $db='apexlfg';
     $query = "INSERT INTO `posts`( `creator`, `team_name`, `current_players`, `playstyle`, `description`) VALUES ('".$post->get_creator_id()."','".$post->get_team_name()."','".$post->get_players()."','".$post->get_style()."','".$post->get_desc()."')";
-    $connect->query($query);
+    $end = $connect->query($query);
     $connect->close();
-    header("Location: /pages/lfg.php");
-    exit;
+    if ($end) {
+        header("Location: /pages/lfg.php");
+        exit;
+    }else {
+        header("Location: /pages/createpost.php");
+        exit;
+    }
+    
+   
     
 }
 

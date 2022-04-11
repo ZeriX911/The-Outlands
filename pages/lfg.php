@@ -39,7 +39,7 @@ get_posts();
                     <tr>
                         <th colspan="4">Avilable teams</th>
                     </tr>
-                    <?php foreach($list as $post){ ?>
+                    <?php foreach($posts as $post){ ?>
                     <tr class="team">
                         <td><?php echo $post->get_team_name()  ?></td>
                         <td><?php echo $post->get_players() ?>/3</td>
