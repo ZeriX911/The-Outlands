@@ -18,6 +18,7 @@ if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] === false) {
     <title>The Outlands</title>
     <link rel="stylesheet" href="../css/style.css">
     <link rel="stylesheet" href="../css/styleLogin.css">
+    <link rel="stylesheet" href="../css/styleUsers.css">
     <link rel="stylesheet" media="print" href="../css/stylePrint.css" />
     <link rel="icon" href="../img/apex.ico">
 </head>
@@ -43,7 +44,7 @@ if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] === false) {
                         {
                             while($row = $result -> fetch_array())
                             {
-                                echo "<span class='users'><a href='otherprofile.php?gid={$row[0]}'>{$row[1]}</a></span></br>";
+                                echo "<span class='userslist'><a href='otherprofile.php?gid={$row[0]}'>{$row[1]}</a></span></br>";
                                 array_push($users, $row[1]);
                             }
                         }

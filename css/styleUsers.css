@@ -1,0 +1,23 @@
+.userslist a:link {
+    color: white;
+    text-decoration: none;
+    font-size: large;
+}
+
+.userslist a:visited {
+    color: white;
+    text-decoration: none;
+    font-size: large;
+}
+
+.userslist a:hover {
+    color: white;
+    text-decoration: underline;
+    font-size: large;
+}
+
+.userslist a:active {
+    color: white;
+    text-decoration: none;
+    font-size: large;
+}
