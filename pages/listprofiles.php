@@ -29,8 +29,8 @@ if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] === false) {
             <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>" method="post">
                     <main id="Container">
                     <fieldset>
-                        <h1 id="logintitle">Login</h1>
-                        <div id="otherprofiles-container"><label for="otherprofiles">Other profiles</label><br>
+                        <h1 id="logintitle">Other Profiles</h1>
+                        <div id="otherprofiles-container">
                         <select name="otherprofiles" id="otherprofiles">
                             <option value="sample">sample</option>
                         </select>
