@@ -60,6 +60,12 @@ if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] === false) {
                     <div id="send-container">
                         <input type="button" id="removeacc" onclick="location.href='removeprofile.php'" value="DELETE ACCOUNT">
                     </div>
+                    <div id="send-container">
+                        <input type="button" id="editacc" onclick="location.href='editprofile.php'" value="EDIT PROFILE">
+                    </div>
+                    <div id="send-container">
+                        <input type="button" id="listprofiles" onclick="location.href='listprofiles.php'" value="LIST OTHER PROFILES">
+                    </div>
                 </form>
             </main>
             <footer>
