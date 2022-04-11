@@ -35,7 +35,7 @@ if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] === false) {
                         <?php
                         require_once('connect.php');
 
-                        $sql = "SELECT id, username FROM users";
+                        $sql = "SELECT * FROM users";
                         $result = $connect -> query($sql);
                         $users = array();
 
