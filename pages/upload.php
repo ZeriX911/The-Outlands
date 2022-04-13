@@ -2,6 +2,8 @@
 
 require_once("connect.php");
 
+$uid = $_SESSION["id"];
+
 if(isset($_POST["submit"]))
 {
     if(!empty($_FILES["image"]["name"]))
@@ -15,7 +17,7 @@ if(isset($_POST["submit"]))
             $image = $_FILES['image']['tmp_name'];
             $imgContent = addslashes(file_get_contents($image));
 
-            $query = $connect -> query("INSERT into users (image) VALUES ('$imgContent')");
+            $query = $connect -> query("UPDATE users SET pic=$imgContent WHERE id=$uid");
         }
     }
 }
