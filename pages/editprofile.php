@@ -45,7 +45,6 @@ if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] === false) {
                       </form>
                     </main>
             <footer>
-              
                 <p>The Outlands Official Project</p>
             </footer>
         </div>
