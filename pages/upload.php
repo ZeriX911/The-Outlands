@@ -2,43 +2,32 @@
 
 require_once("connect.php");
 
-$uid = $_SESSION["id"];
-
 $status = $statusMsg = "";
+
 if(isset($_POST["submit"]))
 {
-    if(!empty($_FILES["image"]["name"]))
+    $b = getimagesize($_FILES["userImage"]["tmp_name"]);
+
+    if($b !== false)
     {
-        $fileName = basename($_FILES["image"]["name"]);
-        $fileType = pathinfo($fileName, PATHINFO_EXTENSION);
+        $file = $_FILES['userImage']['tmp_name'];
+        $image = addslashes(file_get_contents($file));
 
-        $allowTypes = array('jpg', 'png', 'jpeg');
-        if(in_array($fileType, $allowTypes))
+        $sql = "INSERT into images (image) VALUES ('$image')";
+        $query = $connect -> query($sql);
+
+        if($query)
         {
-            $image = $_FILES['image']['tmp_name'];
-            $imgContent = addslashes(file_get_contents($image));
-
-            $sql = "INSERT into images (image) VALUES ('$imgContent')";
-            $insert = $connect -> query($sql);
-
-            if($query)
-            {
-                $status = 'success';
-                $statusMsg = "File uploaded successfully";
-            }
-            else
-            {
-                $statusMsg = "File upload failed";
-            }
+            $statusMsg = "File uploaded successfully";
         }
         else
         {
-            $statusMsg = "Only JPG, PNG, JPEG are allowed";
+            $statusMsg = "File upload failed";
         }
     }
     else
     {
-        $statusMsg = "Please select and image to upload";
+        $statusMsg = "Please select an image to upload";
     }
 }
 
