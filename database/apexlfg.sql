@@ -67,7 +67,7 @@ CREATE TABLE `users` (
   `email` varchar(255) DEFAULT NULL,
   `imageid` int(255) DEFAULT NULL,
   `admin` tinyint DEFAULT 0,
-  `currentteam` varchar(255) DEFAULT NULL
+  `currentteam` varchar(255) DEFAULT NULL,
   `emailpublic` tinyint DEFAULT 1
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
