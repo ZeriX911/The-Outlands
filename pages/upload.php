@@ -13,19 +13,6 @@ if(isset($_POST["submit"]))
 
         $sql = "INSERT INTO users (image) VALUES ('$image')";
         $query = $connect -> query($sql);
-
-        if($query)
-        {
-            echo "File uploaded successfully";
-        }
-        else
-        {
-            echo "File upload failed";
-        }
-    }
-    else
-    {
-        echo "Please select an image to upload";
     }
 }
 
