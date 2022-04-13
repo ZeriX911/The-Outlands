@@ -42,8 +42,7 @@ include_once('post.php');
                     </div>
                     <div id="playercount-container"><label for="playercount">Already joined players</label><br>
                         <select name="playercount" id="playercount">
-                    <option value="1">1</option>
-                    <option value="2">2</option>
+                            <option value="0">0</option>
                 </select>
                     </div>
                     <div id="playstyle-container"><label for="playstyle">Team playstyle</label><br>
