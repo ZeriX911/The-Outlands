@@ -46,7 +46,7 @@ if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] === false) {
                             if($row[1] == NULL){$row[1] = "not set";}
                             if($row[2] == NULL){$row[2] = "not set";}
                             if($row[3] == NULL){$row[3] = "not set";}
-                            if($row[4] == NULL){$row[4] = "Profile picture not set"}
+                            if($row[4] == NULL){$row[4] = "Profile picture not set";}
                             
                             echo "<div id='image-container'><label for='mypic' class='profquery'>{$row[4]}</label><br>";
                             echo "<div id='username-container'><label for='myusername' class='profquery'>Username: {$row[0]}</label><br>";
