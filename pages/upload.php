@@ -6,19 +6,14 @@ $uid = $_SESSION["id"];
 
 if(isset($_POST["submit"]))
 {
-    if(!empty($_FILES["image"]["name"]))
+    $blob = getimagesize($_FILES["userImage"]["tmp_name"]);
+
+    if($blob !== false)
     {
-        $fileName = basename($_FILES["image"]["name"]);
-        $fileType = pathinfo($fileName, PATHINFO_EXTENSION);
+        $file = $_FILES['userImage']['tmp_name'];
+        $image = addslashes(file_get_contents($file));
 
-        $allowTypes = array('jpg', 'png', 'jpeg');
-        if(in_array($fileType, $allowTypes))
-        {
-            $image = $_FILES['image']['tmp_name'];
-            $imgContent = addslashes(file_get_contents($image));
-
-            $query = $connect -> query("UPDATE users SET pic=$imgContent WHERE id=$uid");
-        }
+        $query = $connect -> query("UPDATE users SET pic=$image WHERE id=$uid");
     }
 }
 
