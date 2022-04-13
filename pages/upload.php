@@ -18,7 +18,8 @@ if(isset($_POST["submit"]))
             $image = $_FILES['image']['tmp_name'];
             $imgContent = addslashes(file_get_contents($image));
 
-            $query = $connect -> query("UPDATE users SET pic = $imgContent WHERE id = $uid");
+            $sql = "UPDATE users SET pic = '".$imgContent."' WHERE id = '".$uid."'";
+            $insert = $connect -> query($sql);
 
             if($query)
             {

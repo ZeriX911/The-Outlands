@@ -55,7 +55,7 @@ CREATE TABLE `posts` (
 -- --------------------------------------------------------
 
 --
--- Tábla szerkezet ehhez a táblához `user`
+-- Tábla szerkezet ehhez a táblához `users`
 --
 
 CREATE TABLE `users` (
@@ -69,6 +69,18 @@ CREATE TABLE `users` (
   `admin` tinyint(1) DEFAULT NULL,
   `currentteam` varchar(255) DEFAULT NULL
   `emailpublic` tinyint(1) DEFAULT 1
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+-- --------------------------------------------------------
+
+--
+-- Tábla szerkezet ehhez a táblához `images`
+--
+
+CREATE TABLE `images` (
+  `id` int(255) UNSIGNED NOT NULL,
+  `userid`(255) int NOT NULL,
+  `image` longblob NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
@@ -90,9 +102,15 @@ ALTER TABLE `posts`
   ADD KEY `creator` (`creator`);
 
 --
--- A tábla indexei `user`
+-- A tábla indexei `users`
 --
 ALTER TABLE `users`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- A tábla indexei `images`
+--
+ALTER TABLE `images`
   ADD PRIMARY KEY (`id`);
 
 --
@@ -106,9 +124,15 @@ ALTER TABLE `posts`
   MODIFY `PostID` int(255) NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT a táblához `user`
+-- AUTO_INCREMENT a táblához `users`
 --
 ALTER TABLE `users`
+  MODIFY `id` int(255) UNSIGNED NOT NULL AUTO_INCREMENT;
+
+--
+-- AUTO_INCREMENT a táblához `images`
+--
+ALTER TABLE `images`
   MODIFY `id` int(255) UNSIGNED NOT NULL AUTO_INCREMENT;
 
 --
@@ -121,6 +145,12 @@ ALTER TABLE `users`
 ALTER TABLE `msg`
   ADD CONSTRAINT `msg_ibfk_1` FOREIGN KEY (`sender`) REFERENCES `users` (`id`) ON DELETE CASCADE ON UPDATE CASCADE,
   ADD CONSTRAINT `msg_ibfk_2` FOREIGN KEY (`receiver`) REFERENCES `users` (`id`) ON DELETE CASCADE ON UPDATE CASCADE;
+
+--
+-- Megkötések a táblához `images`
+--
+ALTER TABLE `images`
+  ADD CONSTRAINT `images_ibfk_1` FOREIGN KEY (`userid`) REFERENCES `users` (`id`) ON DELETE CASCADE ON UPDATE CASCADE;
 
 --
 -- Megkötések a táblához `posts`
