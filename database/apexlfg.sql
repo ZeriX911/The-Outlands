@@ -68,6 +68,7 @@ CREATE TABLE `users` (
   `pic` blob DEFAULT NULL,
   `admin` tinyint(1) DEFAULT NULL,
   `currentteam` varchar(255) DEFAULT NULL
+  `emailpublic` tinyint(1) DEFAULT 1
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --

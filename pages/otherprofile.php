@@ -50,6 +50,8 @@ if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] === false) {
                                 if($row[6] == NULL){$row[6] = "not set";}
                                 if($row[8] == NULL){$row[8] = "not set";}
                                 
+                                if()
+                                
                                 echo "<h1 id='logintitle'>Profile of {$row[1]}</h1>";
                                 echo "<div>
                                 <p class='sqlp'>Picture</p>
