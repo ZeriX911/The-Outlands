@@ -31,6 +31,7 @@ USE `apexlfg`;
 --
 
 CREATE TABLE `msg` (
+  `id` int(255) UNSIGNED NOT NULL,
   `sender` int(255) UNSIGNED NOT NULL,
   `receiver` int(255) UNSIGNED NOT NULL,
   `msg` varchar(535) NOT NULL,
@@ -90,8 +91,8 @@ CREATE TABLE `images` (
 -- A tábla indexei `msg`
 --
 ALTER TABLE `msg`
-  ADD PRIMARY KEY (`receiver`,`sender`),
-  ADD KEY `sender` (`sender`,`receiver`);
+  ADD PRIMARY KEY (`id`),
+  ADD KEY `sender` (`id`);
 
 --
 -- A tábla indexei `posts`

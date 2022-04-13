@@ -19,6 +19,7 @@
             ?>
 
             <li><a id='lfg' href='lfg.php'><span>LFG</span></a></li>
+            <li><a id='msg' href="messenger.php"><span>MAIL</span></a></li>
             <li class='last'><a id='profile' href='profile.php'><span>PROFILE</span></a></li>
             
             <?php
@@ -56,6 +57,9 @@
             break;
         case "/pages/editprofile.php":
             active('profile');
+            break;
+        case "/pages/messenger.php":
+            active('msg');
             break;
         default:
             active('home');

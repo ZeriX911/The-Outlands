@@ -1,22 +1,35 @@
 <?php
-include_once('connect.php');
+include_once("connect.php");
 $messages = array();
 class Message{
     private $sender;
     private $receiver;
     private $text;
     private $timestamp;
-    function __construct($sender=$_SESSION['id'],$receiver,$text,$timestamp=date('Y-m-d')){
-        $this->sender = $sender;
+    
+    function __construct($receiver,$text,$timestamp="",$sender=""){
+        if ($sender ==="") {
+            $this->sender = $_SESSION['id'];
+            
+        }else{
+            $this->sender = $sender;
+        }
+       
         $this->receiver = $receiver;
         $this->text = $text;
-        $this->timestamp = $timestamp;
+        if($timestamp==="")
+        {
+           $this->timestamp= date('Y-m-d');
+        }else{
+            $this->timestamp = $timestamp;
+        }
+        
         return $this;
     }
     function get_sender(){
         return $this->sender;
     }    
-    function get_reciever(){
+    function get_receiver(){
         return $this->receiver;
     }
     function get_text(){
@@ -28,35 +41,35 @@ class Message{
 }
 function get_messages(){
     global $connect;
+    global $messages;
     $db='apexlfg';
     $query="Select * from msg where sender=".$_SESSION['id']." OR receiver=".$_SESSION['id'].";";
     $res = $connect->query($query);
     while($row = $res->fetch_row())
     {
-        array_push($messages, new Message($row[0],$row[1],$row[2],$row[3]));
+        array_push($messages, new Message($row[2],$row[3],$row[4],$row[1]) );
     }
 }
 function send_message($receiver,$message){
     global $connect;
     $db='apexlfg';
     $query = "INSERT INTO `msg`( `sender`, `receiver`, `msg`) 
-    VALUES ('".$_SESSION['id']."','".$receiver."','".$message."')";
-    $end = $connect->query($query)
+    VALUES (".$_SESSION['id'].",".$receiver.",'".$message."')";
+    $end = $connect->query($query);
     $connect->close();
     if($end){
-        header("Location: /pages/messaging.php?message=Success happyface");
+        header("Location: /pages/messenger.php?message=Success happyface");
         exit;
     }else{
-        header("Location: /pages/messaging.php?message=No success sadface");
+        header("Location: /pages/messenger.php?message=No success sadface");
         exit;
     }    
 }
+
 if (isset($_POST['messageSend'])) {
-    $reciever = $_POST['reciever'];
+    $receiver = $_POST['receiver'];
     $msg = $_POST['msg'];
-    $new_msg = new Post(receiver:$reciever,text:$msg);
-    array_push($messages,$new_msg)
-    send_message($post);
+    send_message($receiver,$msg);
    var_dump("hello");
 }
 

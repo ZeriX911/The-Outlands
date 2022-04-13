@@ -21,6 +21,9 @@ class Post{
         $this->postID=$postID;
         
     }
+    function set_creator_id($id){
+        $this->creator_id = $id;
+    }
     function get_postID(){
         return $this->postID;
     }
@@ -51,6 +54,7 @@ function get_posts(){
     {
         $post = new Post($row[2],$row[3],$row[4],$row[5]);
         $post->set_postID($row[0]);
+        $post->set_creator_id($row[1]);
         array_push($posts,$post);
     }
     $connect->close();

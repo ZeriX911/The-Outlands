@@ -46,11 +46,14 @@ get_posts();
                         <td><?php echo $post->get_style() ?></td>
                         <td><input type="button" class="btn" value="View"></td>
                         <td><input  class="btn" type="button" value="Message"></td>
-                        <?php if ($post->get_creator_id()===$_SESSION['id']) {
+                        <?php 
+                         if ($post->get_creator_id()==$_SESSION['id']) {
                             ?>
-
+                        
                         <td><form method="POST" action="lfg.php"><button name="delete"  class="btn" type="submit" value="<?php echo $post->get_postID();?>">Delete</button></form></td>
                         <?php
+                        }else{
+                            echo "<td></td>";
                         } ?>
                     </tr>
                     <?php } ?>
