@@ -1,10 +1,11 @@
 <?php
 session_start();
-include_once("connect.php");
+
 if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] === false) {
   header("Location: /pages/index.php");
   exit;
 }
+
 ?>
 
 <!DOCTYPE html>
@@ -27,25 +28,22 @@ if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] === false) {
         <div id="content-wrap">
         <?php include('header.php');?>
                     <main id="Container">
-                    <form action="upload.php" method="post" enctype="multipart/form-data">
-                    <h1 id='logintitle'>Edit Profile</h1>
-                    <?php if ($_GET['error']!="") {
-                    ?>
-                    <div><?php echo $_GET['error'];?></div>
-                    <?php
-                    }else{?>
-                     <div></div>
-                    
-                    <?php
-                }
-                ?>
-                    <label for="file">Upload a profile picture</label><br/>
-                    <input type="file" name="file" />
-                    <input type="submit" id="uploadImage" name="upload" value="Upload" >
-                        </form>
+                    <form>
+                    <fieldset>
+                        <div id="messageuser-container">
+                        <h1 id='logintitle'>Chatting with user</h1>
+                        <div id="message-container"><label for="messageText">Message</label><br>
+                            <textarea name="message" id="messageText" cols="100" rows="20" placeholder="Message"></textarea>
+                        </div>
+                        <div id="send-container">
+                            <input type="submit" value="Send message">
+                        </div>
+                        </div>
+                      </fieldset>
+                      </form>
                     </main>
-
             <footer>
+              
                 <p>The Outlands Official Project</p>
             </footer>
         </div>
