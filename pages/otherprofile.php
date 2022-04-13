@@ -105,7 +105,7 @@ if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] === false) {
                         if($gid != $uid)
                         { ?>
                             <div id='send-container'>
-                            <input type='button' id='messageuser' onclick="location.href='message.php'" value='Message this user'>
+                            <input type='button' id='messageuser' onclick="location.href='messenger.php'" value='Message this user'>
                             </div>
                         <?php } ?>
                         </div>
