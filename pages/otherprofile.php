@@ -38,24 +38,37 @@ if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] === false) {
                         $gid = $_GET["gid"];
                         $uid = $_SESSION["id"];
                         $sql = "SELECT * FROM users WHERE id = $gid";
+                        $sql2 = "SELECT * FROM images WHERE userid = $gid";
                         $result = $connect -> query($sql);
+                        $result2 = $connect -> query($sql2);
 
                         if($result)
                         {
+                            if($result2 -> num_rows > 0)
+                            {
+                                $img = $result2 -> fetch_assoc();
+                            }
+                            else
+                            {
+                                $img = "not set";
+                            }
+                            
                             while($row = $result -> fetch_array())
                             {
                                 if($row[3] == NULL){$row[3] = "not set";}
                                 if($row[4] == NULL){$row[4] = "not set";}
                                 if($row[5] == NULL){$row[5] = "not set";}
                                 if($row[6] == NULL){$row[6] = "not set";}
-                                if($row[8] == NULL){$row[8] = "not set";}
+                                if($row[8] == NULL){$row[7] = "not set";}
                                 
-                                if($row[9] == 1)
+                                if($row[8] == 1)
                                 {
+                                    header("Conent-type: image/jpg");
+                                    
                                     echo "<h1 id='logintitle'>Profile of {$row[1]}</h1>";
                                     echo "<div>
                                     <p class='sqlp'>Picture</p>
-                                    <div class='sqllista'>{$row[6]}</div>
+                                    <div class='sqllista'>{$img['image']}</div>
                                     <p class='sqlp'>Birth</p>
                                     <div class='sqllista'>{$row[3]}</div>
                                     <p class='sqlp'>Description:</p>
@@ -63,14 +76,16 @@ if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] === false) {
                                     <p class='sqlp'>E-mail:</p>
                                     <div class='sqllista'>{$row[5]}</div>
                                     <p class='sqlp'>Current Team:</p>
-                                    <div class='sqllista'>{$row[8]}</div>";
+                                    <div class='sqllista'>{$row[7]}</div>";
                                 }
                                 else
                                 {
+                                    header("Conent-type: image/jpg");
+                                    
                                     echo "<h1 id='logintitle'>Profile of {$row[1]}</h1>";
                                     echo "<div>
                                     <p class='sqlp'>Picture</p>
-                                    <div class='sqllista'>{$row[6]}</div>
+                                    <div class='sqllista'>{$img['image']}</div>
                                     <p class='sqlp'>Birth</p>
                                     <div class='sqllista'>{$row[3]}</div>
                                     <p class='sqlp'>Description:</p>
@@ -78,7 +93,7 @@ if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] === false) {
                                     <p class='sqlp'>E-mail:</p>
                                     <div class='sqllista'>not public</div>
                                     <p class='sqlp'>Current Team:</p>
-                                    <div class='sqllista'>{$row[8]}</div>";
+                                    <div class='sqllista'>{$row[7]}</div>";
                                 }
                             }
                         }

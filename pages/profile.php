@@ -36,23 +36,34 @@ if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] === false) {
                         require_once('connect.php');
 
                         $uname = $_SESSION["id"];
-                        $query = "SELECT username, email, currentteam, birth, imageid FROM users WHERE id=$uname";
+                        $query = "SELECT username, email, currentteam, birth FROM users WHERE id=$uname";
+                        $sql2 = "SELECT * FROM images WHERE userid = $gid";
                         $resultq = $connect -> query($query);
+                        $result2 = $connect -> query($sql2);
+
                         if($resultq)
                         {
-                          while($row = $resultq -> fetch_array())
-                          {
+                            if($result2 -> num_rows > 0)
+                            {
+                                $img = $result2 -> fetch_assoc();
+                            }
+                            else
+                            {
+                                $img = "not set";
+                            }
+                          
+                            while($row = $resultq -> fetch_array())
+                            {
                             
-                            if($row[1] == NULL){$row[1] = "not set";}
-                            if($row[2] == NULL){$row[2] = "not set";}
-                            if($row[3] == NULL){$row[3] = "not set";}
-                            if($row[4] == NULL){$row[4] = "Profile picture not set";}
+                                if($row[1] == NULL){$row[1] = "not set";}
+                                if($row[2] == NULL){$row[2] = "not set";}
+                                if($row[3] == NULL){$row[3] = "not set";}
                             
-                            echo "<div id='image-container'><label for='mypic' class='profquery'>{$row[4]}</label><br>";
-                            echo "<div id='username-container'><label for='myusername' class='profquery'>Username: {$row[0]}</label><br>";
-                            echo "<div id='username-container'><label for='myemail' class='profquery'>E-mail: {$row[1]}</label><br>";
-                            echo "<div id='username-container'><label for='myteam' class='profquery'>Current team: {$row[2]}</label><br>";
-                            echo "<div id='username-container'><label for='mybirth' class='profquery'>Birth: {$row[3]}</label><br>";
+                                echo "<div id='image-container'><label for='mypic' class='profquery'>{$img['image']}</label><br>";
+                                echo "<div id='username-container'><label for='myusername' class='profquery'>Username: {$row[0]}</label><br>";
+                                echo "<div id='username-container'><label for='myemail' class='profquery'>E-mail: {$row[1]}</label><br>";
+                                echo "<div id='username-container'><label for='myteam' class='profquery'>Current team: {$row[2]}</label><br>";
+                                echo "<div id='username-container'><label for='mybirth' class='profquery'>Birth: {$row[3]}</label><br>";
                           }
                         }
                     ?>
