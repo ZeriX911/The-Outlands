@@ -65,7 +65,7 @@ CREATE TABLE `users` (
   `birth` date DEFAULT NULL,
   `description` varchar(255) DEFAULT NULL,
   `email` varchar(255) DEFAULT NULL,
-  `pic` blob DEFAULT NULL,
+  `imageid` int(255) DEFAULT NULL,
   `admin` tinyint DEFAULT 0,
   `currentteam` varchar(255) DEFAULT NULL
   `emailpublic` tinyint DEFAULT 1
@@ -151,6 +151,12 @@ ALTER TABLE `msg`
 --
 ALTER TABLE `images`
   ADD CONSTRAINT `images_ibfk_1` FOREIGN KEY (`userid`) REFERENCES `users` (`id`) ON DELETE CASCADE ON UPDATE CASCADE;
+
+--
+-- Megkötések a táblához `users`
+--
+ALTER TABLE `users`
+  ADD CONSTRAINT `users_ibfk_1` FOREIGN KEY (`imageid`) REFERENCES `images` (`id`) ON DELETE CASCADE ON UPDATE CASCADE;
 
 --
 -- Megkötések a táblához `posts`
