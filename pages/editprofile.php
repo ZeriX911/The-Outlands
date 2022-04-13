@@ -27,14 +27,18 @@ if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] === false) {
     <div id="page-container">
         <div id="content-wrap">
         <?php include('header.php');?>
-            <form>
                     <main id="Container">
+                    <form>
                     <fieldset>
                         <div id="editprofile-container">
+                        <h1 id='logintitle'>Edit Profile</h1>
+                        <form>
+
+                        </form>
                         </div>
                       </fieldset>
+                      </form>
                     </main>
-            </form>
             <footer>
               
                 <p>The Outlands Official Project</p>
