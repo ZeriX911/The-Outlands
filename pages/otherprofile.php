@@ -99,12 +99,11 @@ if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] === false) {
                         }
 
                         if($gid != $uid)
-                        {
-                            echo "<div id='send-container'>";
-                            echo "<input type='button' id='messageuser' onclick='location.href='message.php' value='Message this user'>";
-                            echo "</div>";
-                        }
-                        ?>
+                        { ?>
+                            <div id='send-container'>
+                            <input type='button' id='messageuser' onclick="location.href='message.php'" value='Message this user'>
+                            </div>
+                        <?php } ?>
                         </div>
                       </fieldset>
                       </form>
