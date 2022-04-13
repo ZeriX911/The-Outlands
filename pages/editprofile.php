@@ -34,8 +34,8 @@ if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] === false) {
                         <h1 id='logintitle'>Edit Profile</h1>
                         <form enctype="multipart/form-data" action="upload.php" method="post">
                             <label for="upload">Upload a profile picture</label><br/>
-                            <input name="userImage" type="file">
-                            <input type="submit" value="Upload">
+                            <input name="image" type="file">
+                            <input type="submit" name="submit" value="Upload">
                         </form>
                         </div>
                       </fieldset>

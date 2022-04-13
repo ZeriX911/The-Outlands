@@ -4,17 +4,43 @@ require_once("connect.php");
 
 $uid = $_SESSION["id"];
 
+$status = $statusMsg = "";
 if(isset($_POST["submit"]))
 {
-    $blob = getimagesize($_FILES["userImage"]["tmp_name"]);
-
-    if($blob !== false)
+    if(!empty($_FILES["image"]["name"]))
     {
-        $file = $_FILES['userImage']['tmp_name'];
-        $image = addslashes(file_get_contents($file));
+        $fileName = basename($_FILES["image"]["name"]);
+        $fileType = pathinfo($fileName, PATHINFO_EXTENSION);
 
-        $query = $connect -> query("UPDATE users SET pic=$image WHERE id=$uid");
+        $allowTypes = array('jpg', 'png', 'jpeg');
+        if(in_array($fileType, $allowTypes))
+        {
+            $image = $_FILES['image']['tmp_name'];
+            $imgContent = addslashes(file_get_contents($image));
+
+            $query = $connect -> query("UPDATE users SET pic=$imgContent WHERE id=$uid");
+
+            if($query)
+            {
+                $status = 'success';
+                $statusMsg = "File uploaded successfully";
+            }
+            else
+            {
+                $statusMsg = "File upload failed";
+            }
+        }
+        else
+        {
+            $statusMsg = "Only JPG, PNG, JPEG are allowed";
+        }
+    }
+    else
+    {
+        $statusMsg = "Please select and image to upload";
     }
 }
+
+echo "<p>{$statusMsg}</p>";
 
 ?>
