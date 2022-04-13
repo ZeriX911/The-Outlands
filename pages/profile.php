@@ -37,7 +37,7 @@ if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] === false) {
 
                         $uname = $_SESSION["id"];
                         $query = "SELECT username, email, currentteam, birth FROM users WHERE id=$uname";
-                        $sql2 = "SELECT * FROM images WHERE userid = $gid";
+                        $sql2 = "SELECT * FROM images WHERE userid = $uname";
                         $resultq = $connect -> query($query);
                         $result2 = $connect -> query($sql2);
 
@@ -49,7 +49,7 @@ if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] === false) {
                             }
                             else
                             {
-                                $img['image'] = NULL;
+                                $img['image'] = "profile picture not set";
                             }
                           
                             while($row = $resultq -> fetch_array())

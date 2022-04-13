@@ -50,7 +50,7 @@ if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] === false) {
                             }
                             else
                             {
-                                $img['image'] = NULL;
+                                $img['image'] = "not set";
                             }
                             
                             while($row = $result -> fetch_array())
