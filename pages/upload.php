@@ -4,15 +4,19 @@ require_once("connect.php");
 
 if(isset($_POST["submit"]))
 {
-    $blob = getimagesize($_FILES["userImage"]["tmpName"]);
-
-    if($blob !== false)
+    if(!empty($_FILES["image"]["name"]))
     {
-        $file = $_FILES["userImage"]["tmpName"];
-        $image = addslashes(file_get_contents($file));
+        $fileName = basename($_FILES["image"]["name"]);
+        $fileType = pathinfo($fileName, PATHINFO_EXTENSION);
 
-        $sql = "INSERT INTO users (image) VALUES ('$image')";
-        $query = $connect -> query($sql);
+        $allowTypes = array('jpg', 'png', 'jpeg');
+        if(in_array($fileType, $allowTypes))
+        {
+            $image = $_FILES['image']['tmp_name'];
+            $imgContent = addslashes(file_get_contents($image));
+
+            $query = $connect -> query("INSERT into users (image) VALUES ('$imgContent')");
+        }
     }
 }
 
