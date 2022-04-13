@@ -1,5 +1,5 @@
 <?php
-
+    global $connect;
     $connect = new mysqli('localhost', 'root', '', 'apexlfg', '3306');
 
     if($connect -> errno !=0)

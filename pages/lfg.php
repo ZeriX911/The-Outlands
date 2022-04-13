@@ -37,14 +37,21 @@ get_posts();
                 </div>
                 <table>
                     <tr>
-                        <th colspan="4">Avilable teams</th>
+                        <th colspan="6">Avilable teams</th>
                     </tr>
                     <?php foreach($posts as $post){ ?>
                     <tr class="team">
                         <td><?php echo $post->get_team_name()  ?></td>
                         <td><?php echo $post->get_players() ?>/3</td>
                         <td><?php echo $post->get_style() ?></td>
-                        <td class="send-container"><input type="submit" value="JOIN" class="join"></td>
+                        <td><input type="button" class="btn" value="View"></td>
+                        <td><input  class="btn" type="button" value="Message"></td>
+                        <?php if ($post->get_creator_id()===$_SESSION['id']) {
+                            ?>
+
+                        <td><form method="POST" action="lfg.php"><button name="delete"  class="btn" type="submit" value="<?php echo $post->get_postID();?>">Delete</button></form></td>
+                        <?php
+                        } ?>
                     </tr>
                     <?php } ?>
                     </tr>

@@ -1,6 +1,7 @@
 <?php
 $posts= array();
 class Post{
+    private  $postID;
     private  $creator_id;
     private  $team_name;
     private  $players;
@@ -8,12 +9,20 @@ class Post{
     private  $desc;
 
     function __construct($team_name,$players,$style,$desc){
+        
         $this->creator_id = $_SESSION['id'];
         $this->team_name = $team_name;
         $this->players = $players;
         $this->style = $style;
         $this->desc = $desc;
         return $this;
+    }
+    function set_postID($postID) : void{
+        $this->postID=$postID;
+        
+    }
+    function get_postID(){
+        return $this->postID;
     }
     function get_creator_id(){
         return $this->creator_id;
@@ -35,15 +44,16 @@ class Post{
 
 function get_posts(){
     global $connect;
-    global $posts
-    ;
+    global $posts;
     $query = "SELECT * from posts";
     $res = $connect->query($query);
     while($row = $res->fetch_row())
     {
-        array_push($posts
-        , new Post($row[2],$row[3],$row[4],$row[5]));
+        $post = new Post($row[2],$row[3],$row[4],$row[5]);
+        $post->set_postID($row[0]);
+        array_push($posts,$post);
     }
+    $connect->close();
 
 }
 
@@ -62,9 +72,19 @@ function send_post(Post $post){
     }
     
    
-    
 }
-
+function delete($id){
+    global $posts;
+    global $connect;
+    $query = "DELETE from posts WHERE PostID=".$id;
+    var_dump($connect);
+    $res = $connect->query($query);
+    $connect->close();
+    if($res){
+        header("Location: /pages/lfg.php");
+        exit;
+    }
+}
 if (isset($_POST['form'])) {
     $team_name = $_POST['teamname'];
     $players = $_POST['playercount'];
@@ -73,5 +93,7 @@ if (isset($_POST['form'])) {
    $post = new Post($team_name,$players,$style,$desc);
    send_post($post);
 }
-
+if (isset($_POST['delete'])) {
+    delete($_POST['delete']);
+}
 ?>

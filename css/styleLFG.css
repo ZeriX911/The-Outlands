@@ -44,7 +44,7 @@ td {
     background-color: rgba(0, 0, 0, 0.2);
 }
 
-.join {
+.btn {
     width: 50%;
     border: 1px solid red;
     border-radius: 4px;
@@ -54,7 +54,7 @@ td {
     font-size: large;
 }
 
-.join:hover {
+.btn:hover {
     background-color: #4D0000;
     border: 1px solid #4D0000;
     cursor: pointer;
