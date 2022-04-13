@@ -59,7 +59,7 @@ if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] === false) {
                                 if($row[4] == NULL){$row[4] = "not set";}
                                 if($row[5] == NULL){$row[5] = "not set";}
                                 if($row[6] == NULL){$row[6] = "not set";}
-                                if($row[8] == NULL){$row[7] = "not set";}
+                                if($row[7] == NULL){$row[7] = "not set";}
                                 
                                 if($row[8] == 1)
                                 {

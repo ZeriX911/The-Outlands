@@ -48,6 +48,15 @@
         case "/pages/profile.php":
             active('profile');
             break;
+        case "/pages/otherprofile.php":
+            active('profile');
+            break;
+        case "/pages/listprofiles.php":
+            active('profile');
+            break;
+        case "/pages/editprofile.php":
+            active('profile');
+            break;
         default:
             active('home');
             break;
