@@ -10,7 +10,7 @@ if(isset($_POST['upload']))
 {   
  $file_loc = $_FILES['file']['tmp_name'];
  if ($file_loc==="") {
-    error("Nincs megadva kép ");
+    error("No image has been selected");
  }
  $imagelink = file_get_contents($file_loc);
  $encdata = base64_encode($imagelink);
@@ -24,14 +24,14 @@ if($results){
 
   $sql= "INSERT into images (userid, image) VALUES ('$uid', '$encdata')";
   if($connect->query($sql)){
-    echo "Success :D";
+    echo "Success";
     $connect->close();
     header('Location: profile.php');
   }else{
-      error("Nem sikerült pedig eskü próbáltam :(");
+      error("Something went wrong");
   }
 }else{
-    error("Nem sikerült pedig eskü próbáltam :(");;
+    error("Something went wrong");;
 }
 }
 ?>

@@ -50,7 +50,7 @@ if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] === false) {
                             }
                             else
                             {
-                                $img['image'] = "not set";
+                                $img['image'] = "none";
                             }
                             
                             while($row = $result -> fetch_array())
@@ -63,13 +63,15 @@ if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] === false) {
                                 
                                 if($row[8] == 1)
                                 {
-                                    header("Conent-type: image/jpg");
-                                    
                                     echo "<h1 id='logintitle'>Profile of {$row[1]}</h1>";
                                     echo "<div>
-                                    <p class='sqlp'>Picture</p>
-                                    <div class='sqllista'>{$img['image']}</div>
-                                    <p class='sqlp'>Birth</p>
+                                    <p class='sqlp'>Picture</p>"; if($img['image']!="none"){ ?>
+                                    <div id='image-container'> <img src="data:image/jpg;charset=utf8;base64,<?php echo $img['image'] ?>" /> <br>
+                                    <?php
+                                    }else {
+                                    ?>
+                                    <div id='image-container'> <img src="../img/legends/stock.jpg" /> <br>
+                                    <?php } echo "<p class='sqlp'>Birth</p>
                                     <div class='sqllista'>{$row[3]}</div>
                                     <p class='sqlp'>Description:</p>
                                     <div class='sqllista'>{$row[4]}</div>
@@ -79,14 +81,16 @@ if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] === false) {
                                     <div class='sqllista'>{$row[7]}</div>";
                                 }
                                 else
-                                {
-                                    header("Conent-type: image/jpg");
-                                    
+                                { 
                                     echo "<h1 id='logintitle'>Profile of {$row[1]}</h1>";
                                     echo "<div>
-                                    <p class='sqlp'>Picture</p>
-                                    <div class='sqllista'>{$img['image']}</div>
-                                    <p class='sqlp'>Birth</p>
+                                    <p class='sqlp'>Picture</p>"; if($img['image']!="none"){ ?>
+                                    <div id='image-container'> <img src="data:image/jpg;charset=utf8;base64,<?php echo $img['image'] ?>" /> <br>
+                                    <?php
+                                    }else {
+                                    ?>
+                                    <div id='image-container'> <img src="../img/legends/stock.jpg" /> <br>
+                                    <?php } echo "<p class='sqlp'>Birth</p>
                                     <div class='sqllista'>{$row[3]}</div>
                                     <p class='sqlp'>Description:</p>
                                     <div class='sqllista'>{$row[4]}</div>
