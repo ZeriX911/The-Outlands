@@ -41,6 +41,4 @@ if(isset($_POST["submit"]))
     }
 }
 
-echo "<p>{$statusMsg}</p>";
-
 ?>

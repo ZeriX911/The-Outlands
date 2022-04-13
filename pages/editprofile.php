@@ -6,6 +6,8 @@ if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] === false) {
   exit;
 }
 
+include 'upload.php';
+
 ?>
 
 <!DOCTYPE html>
@@ -31,9 +33,12 @@ if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] === false) {
                     <form>
                     <fieldset>
                         <div id="editprofile-container">
+                            <?php if(!empty($statusMsg)) {?>
+                               <p class="status <?php echo $status; ?>"><?php echo $statisMsg; ?></p> 
+                            <?php } ?>
                         <h1 id='logintitle'>Edit Profile</h1>
-                        <form enctype="multipart/form-data" action="upload.php" method="post">
-                            <label for="upload">Upload a profile picture</label><br/>
+                        <form enctype="multipart/form-data" action="" method="post">
+                            <label for="image">Upload a profile picture</label><br/>
                             <input name="image" type="file">
                             <input type="submit" name="submit" value="Upload">
                         </form>
