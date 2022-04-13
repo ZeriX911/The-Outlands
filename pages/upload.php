@@ -1,35 +1,37 @@
 <?php
-
-require_once("connect.php");
-
-$status = $statusMsg = "";
-$uname = $_SESSION["id"];
-
-if(isset($_POST["uploadImage"]))
-{
-    $b = getimagesize($_FILES["userImage"]["tmp_name"]);
-
-    if($b !== false)
-    {
-        $file = $_FILES['userImage']['tmp_name'];
-        $image = addslashes(file_get_contents($file));
-
-        $sql = "INSERT into images (userid, image) VALUES ('$uname', '$image')";
-        $query = $connect -> query($sql);
-
-        if($query)
-        {
-            $statusMsg = "File uploaded successfully";
-        }
-        else
-        {
-            $statusMsg = "File upload failed";
-        }
-    }
-    else
-    {
-        $statusMsg = "Please select an image to upload";
-    }
+session_start();
+$uid=$_SESSION['id'];
+$msg="";
+include_once('connect.php');
+function error($msg){
+    header('Location: editprofile.php?error='.$msg);
 }
+if(isset($_POST['upload']))
+{   
+ $file_loc = $_FILES['file']['tmp_name'];
+ if ($file_loc==="") {
+    error("Nincs megadva kép ");
+ }
+ $imagelink = file_get_contents($file_loc);
+ $encdata = base64_encode($imagelink);
+ $list="SELECT * FROM images WHERE userid=".$uid;
+ $results = $connect->query($list);
+if($results){
 
+  if($results->num_rows>0){
+      $connect -> query("DELETE FROM images where userid=".$uid);
+  }
+
+  $sql= "INSERT into images (userid, image) VALUES ('$uid', '$encdata')";
+  if($connect->query($sql)){
+    echo "Success :D";
+    $connect->close();
+    header('Location: profile.php');
+  }else{
+      error("Nem sikerült pedig eskü próbáltam :(");
+  }
+}else{
+    error("Nem sikerült pedig eskü próbáltam :(");;
+}
+}
 ?>

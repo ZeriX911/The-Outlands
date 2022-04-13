@@ -72,7 +72,6 @@ if (isset($_POST['form'])) {
     $desc = $_POST['description'];
    $post = new Post($team_name,$players,$style,$desc);
    send_post($post);
-   var_dump("hello");
 }
 
 ?>

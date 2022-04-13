@@ -49,7 +49,7 @@ if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] === false) {
                             }
                             else
                             {
-                                $img['image'] = "profile picture not set";
+                                $img['image'] = "none";
                             }
                           
                             while($row = $resultq -> fetch_array())
@@ -58,13 +58,22 @@ if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] === false) {
                                 if($row[1] == NULL){$row[1] = "not set";}
                                 if($row[2] == NULL){$row[2] = "not set";}
                                 if($row[3] == NULL){$row[3] = "not set";}
-                            
-                                echo "<div id='image-container'><label for='mypic' class='profquery'>{$img['image']}</label><br>";
-                                echo "<div id='username-container'><label for='myusername' class='profquery'>Username: {$row[0]}</label><br>";
-                                echo "<div id='username-container'><label for='myemail' class='profquery'>E-mail: {$row[1]}</label><br>";
-                                echo "<div id='username-container'><label for='myteam' class='profquery'>Current team: {$row[2]}</label><br>";
-                                echo "<div id='username-container'><label for='mybirth' class='profquery'>Birth: {$row[3]}</label><br>";
-                          }
+                            if($img['image']!="none"){ ?>
+                                <div id='image-container'> <img src="data:image/jpg;charset=utf8;base64,<?php echo $img['image'] ?>" /> <br>
+                            <?php
+                            }else {
+                            ?>
+                            <div id='image-container'> <img src="../img/legends/stock.jpg" /> <br>
+                                
+                            <?php 
+                            } 
+                            ?>
+                                <div id='username-container'><label for='myusername' class='profquery'>Username:<?php echo $row[0]?></label><br>
+                               <div id='username-container'><label for='myemail' class='profquery'>E-mail: <?php echo $row[1]?></label><br>
+                               <div id='username-container'><label for='myteam' class='profquery'>Current team: <?php echo $row[2]?></label><br>
+                               <div id='username-container'><label for='mybirth' class='profquery'>Birth: <?php echo $row[3]?></label><br>
+                            <?php
+                            }
                         }
                     ?>
                     <div id="send-container">

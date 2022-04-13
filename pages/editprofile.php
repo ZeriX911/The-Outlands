@@ -1,11 +1,10 @@
 <?php
 session_start();
-
+include_once("connect.php");
 if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] === false) {
   header("Location: /pages/index.php");
   exit;
 }
-
 ?>
 
 <!DOCTYPE html>
@@ -28,22 +27,24 @@ if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] === false) {
         <div id="content-wrap">
         <?php include('header.php');?>
                     <main id="Container">
-                    <form>
-                    <fieldset>
-                        <div id="editprofile-container">
-                        <h1 id='logintitle'>Edit Profile</h1>
-                        <?php if(!empty($statusMsg)) {?>
-                               <p><?php echo $statusMsg; ?></p> 
-                            <?php } ?>
-                        <form enctype="multipart/form-data" action="upload.php" method="post">
-                            <label for="image">Upload a profile picture</label><br/>
-                            <input name="userImage" type="file">
-                            <input type="submit" name="uploadImage" value="Upload">
+                    <form action="upload.php" method="post" enctype="multipart/form-data">
+                    <h1 id='logintitle'>Edit Profile</h1>
+                    <?php if ($_GET['error']!="") {
+                    ?>
+                    <div><?php echo $_GET['error'];?></div>
+                    <?php
+                    }else{?>
+                     <div></div>
+                    
+                    <?php
+                }
+                ?>
+                    <label for="file">Upload a profile picture</label><br/>
+                    <input type="file" name="file" />
+                    <input type="submit" id="uploadImage" name="upload" value="Upload" >
                         </form>
-                        </div>
-                      </fieldset>
-                      </form>
                     </main>
+
             <footer>
               
                 <p>The Outlands Official Project</p>
