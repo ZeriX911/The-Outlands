@@ -33,10 +33,10 @@ include 'upload.php';
                     <form>
                     <fieldset>
                         <div id="editprofile-container">
-                            <?php if(!empty($statusMsg)) {?>
-                               <p class="status <?php echo $status; ?>"><?php echo $statisMsg; ?></p> 
-                            <?php } ?>
                         <h1 id='logintitle'>Edit Profile</h1>
+                        <?php if(!empty($statusMsg)) {?>
+                               <p class="status <?php echo $status; ?>"><?php echo $statusMsg; ?></p> 
+                            <?php } ?>
                         <form enctype="multipart/form-data" action="" method="post">
                             <label for="image">Upload a profile picture</label><br/>
                             <input name="image" type="file">
