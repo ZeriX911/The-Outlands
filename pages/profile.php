@@ -36,7 +36,7 @@ if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] === false) {
                         require_once('connect.php');
 
                         $uname = $_SESSION["id"];
-                        $query = "SELECT username, email, currentteam, birth, pic FROM users WHERE id=$uname";
+                        $query = "SELECT username, email, currentteam, birth, imageid FROM users WHERE id=$uname";
                         $resultq = $connect -> query($query);
                         if($resultq)
                         {

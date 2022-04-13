@@ -65,7 +65,7 @@ CREATE TABLE `users` (
   `birth` date DEFAULT NULL,
   `description` varchar(255) DEFAULT NULL,
   `email` varchar(255) DEFAULT NULL,
-  `imageid` int(255) DEFAULT NULL,
+  `imageid` int(255) UNSIGNED DEFAULT NULL,
   `admin` tinyint DEFAULT 0,
   `currentteam` varchar(255) DEFAULT NULL,
   `emailpublic` tinyint DEFAULT 1
@@ -79,7 +79,6 @@ CREATE TABLE `users` (
 
 CREATE TABLE `images` (
   `id` int(255) UNSIGNED NOT NULL,
-  `userid`(255) int NOT NULL,
   `image` longblob NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
@@ -145,12 +144,6 @@ ALTER TABLE `images`
 ALTER TABLE `msg`
   ADD CONSTRAINT `msg_ibfk_1` FOREIGN KEY (`sender`) REFERENCES `users` (`id`) ON DELETE CASCADE ON UPDATE CASCADE,
   ADD CONSTRAINT `msg_ibfk_2` FOREIGN KEY (`receiver`) REFERENCES `users` (`id`) ON DELETE CASCADE ON UPDATE CASCADE;
-
---
--- Megkötések a táblához `images`
---
-ALTER TABLE `images`
-  ADD CONSTRAINT `images_ibfk_1` FOREIGN KEY (`userid`) REFERENCES `users` (`id`) ON DELETE CASCADE ON UPDATE CASCADE;
 
 --
 -- Megkötések a táblához `users`

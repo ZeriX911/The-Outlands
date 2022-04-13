@@ -42,6 +42,9 @@
         case "/pages/login.php":
             active('login');
             break;
+        case "/pages/register.php":
+            active('login');
+            break;
         case "/pages/profile.php":
             active('profile');
             break;
