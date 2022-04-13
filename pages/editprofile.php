@@ -29,7 +29,7 @@ if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] === false) {
                     <main id="Container">
                     <form action="upload.php" method="post" enctype="multipart/form-data">
                     <h1 id='logintitle'>Edit Profile</h1>
-                    <?php if ($_GET['error']!="") {
+                    <?php if (isset($_GET['error'])) {
                     ?>
                     <div><?php echo $_GET['error'];?></div>
                     <?php
