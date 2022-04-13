@@ -50,20 +50,36 @@ if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] === false) {
                                 if($row[6] == NULL){$row[6] = "not set";}
                                 if($row[8] == NULL){$row[8] = "not set";}
                                 
-                                if()
-                                
-                                echo "<h1 id='logintitle'>Profile of {$row[1]}</h1>";
-                                echo "<div>
-                                <p class='sqlp'>Picture</p>
-                                <div class='sqllista'>{$row[6]}</div>
-                                <p class='sqlp'>Birth</p>
-                                <div class='sqllista'>{$row[3]}</div>
-                                <p class='sqlp'>Description:</p>
-                                <div class='sqllista'>{$row[4]}</div>
-                                <p class='sqlp'>E-mail:</p>
-                                <div class='sqllista'>{$row[5]}</div>
-                                <p class='sqlp'>Current Team:</p>
-                                <div class='sqllista'>{$row[8]}</div>";
+                                if($row[9] == 1)
+                                {
+                                    echo "<h1 id='logintitle'>Profile of {$row[1]}</h1>";
+                                    echo "<div>
+                                    <p class='sqlp'>Picture</p>
+                                    <div class='sqllista'>{$row[6]}</div>
+                                    <p class='sqlp'>Birth</p>
+                                    <div class='sqllista'>{$row[3]}</div>
+                                    <p class='sqlp'>Description:</p>
+                                    <div class='sqllista'>{$row[4]}</div>
+                                    <p class='sqlp'>E-mail:</p>
+                                    <div class='sqllista'>{$row[5]}</div>
+                                    <p class='sqlp'>Current Team:</p>
+                                    <div class='sqllista'>{$row[8]}</div>";
+                                }
+                                else
+                                {
+                                    echo "<h1 id='logintitle'>Profile of {$row[1]}</h1>";
+                                    echo "<div>
+                                    <p class='sqlp'>Picture</p>
+                                    <div class='sqllista'>{$row[6]}</div>
+                                    <p class='sqlp'>Birth</p>
+                                    <div class='sqllista'>{$row[3]}</div>
+                                    <p class='sqlp'>Description:</p>
+                                    <div class='sqllista'>{$row[4]}</div>
+                                    <p class='sqlp'>E-mail:</p>
+                                    <div class='sqllista'>not public</div>
+                                    <p class='sqlp'>Current Team:</p>
+                                    <div class='sqllista'>{$row[8]}</div>";
+                                }
                             }
                         }
                         ?>
