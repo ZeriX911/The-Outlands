@@ -3,6 +3,7 @@
 require_once("connect.php");
 
 $status = $statusMsg = "";
+$uname = $_SESSION["id"];
 
 if(isset($_POST["uploadImage"]))
 {
@@ -13,7 +14,7 @@ if(isset($_POST["uploadImage"]))
         $file = $_FILES['userImage']['tmp_name'];
         $image = addslashes(file_get_contents($file));
 
-        $sql = "INSERT into images (image) VALUES ('$image')";
+        $sql = "INSERT into images (userid, image) VALUES ('$uname', '$image')";
         $query = $connect -> query($sql);
 
         if($query)
