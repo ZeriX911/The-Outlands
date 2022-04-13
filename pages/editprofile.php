@@ -38,7 +38,7 @@ if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] === false) {
                         <form enctype="multipart/form-data" action="upload.php" method="post">
                             <label for="image">Upload a profile picture</label><br/>
                             <input name="userImage" type="file">
-                            <input type="submit" value="Upload">
+                            <input type="submit" name="uploadImage" value="Upload">
                         </form>
                         </div>
                       </fieldset>

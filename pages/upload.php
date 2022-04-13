@@ -4,7 +4,7 @@ require_once("connect.php");
 
 $status = $statusMsg = "";
 
-if(isset($_POST["submit"]))
+if(isset($_POST["uploadImage"]))
 {
     $b = getimagesize($_FILES["userImage"]["tmp_name"]);
 
