@@ -18,7 +18,7 @@ if(isset($_POST["submit"]))
             $image = $_FILES['image']['tmp_name'];
             $imgContent = addslashes(file_get_contents($image));
 
-            $sql = "UPDATE users SET pic = '".$imgContent."' WHERE id = '".$uid."'";
+            $sql = "INSERT into images (image) VALUES ('$imgContent')";
             $insert = $connect -> query($sql);
 
             if($query)
