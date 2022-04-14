@@ -191,6 +191,23 @@ footer {
     height: auto;
 }
 
+#howtojoin {
+    font-size: 2em;
+    padding-bottom: 2em;
+    padding-top: 2em;
+    letter-spacing: 1.5px;
+}
+
+#howtojoinlist {
+    list-style-type: decimal;
+}
+
+.step {
+    font-size: 2em;
+    letter-spacing: 1.35px;
+    font-family: EA-Games;
+}
+
 
 @media print {
     nav {

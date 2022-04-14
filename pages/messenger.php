@@ -54,15 +54,12 @@ get_messages();
                             }?>
                         </table>
 
-
-
-
                     <form method="POST" action="messenger.php">
                     <fieldset>
                         <div id="messageuser-container">
                         <h1 id='logintitle'>Chatting with user</h1>
                         <div id="message-receiver">
-                            <label for="receiver">To:</label>
+                            <label for="receiver">Receiver:</label><br>
                             <select name="receiver" id="receiver">
                                     <?php
                                     global $connect;
@@ -89,7 +86,7 @@ get_messages();
                             <textarea name="msg" id="messageText" cols="100" rows="20" placeholder="Message"></textarea>
                         </div>
                         <div id="send-container">
-                            <button type="submit" name="messageSend" >Send </button>
+                            <button type="submit" name="messageSend">Send</button>
                         </div>
                         </div>
                       </fieldset>

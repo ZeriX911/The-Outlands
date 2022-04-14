@@ -18,7 +18,8 @@ label {
 #email-container,
 #date-container,
 #pwd-verify-container,
-#radio-container {
+#radio-container,
+#message-container {
     margin-top: 25px;
 }
 
@@ -51,16 +52,24 @@ main>h1:nth-of-type(2) {
 input[type=email],
 input[type=password],
 input[type=text],
-input[type=date] {
+input[type=date],
+select[name=receiver] {
     width: 30%;
     border: 1px solid #ccc;
     border-radius: 4px;
     padding: 12px 20px;
 }
 
+textarea[name=msg] {
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    width: 30%;
+}
+
 input[type=submit],
 input[type=reset],
-input[type=button] {
+input[type=button],
+button[name=messageSend] {
     width: 20%;
     border: 1px solid red;
     border-radius: 4px;
@@ -74,7 +83,8 @@ input[type=button] {
 
 input[type=submit]:hover,
 input[type=reset]:hover,
-input[type=button]:hover {
+input[type=button]:hover,
+button[name=messageSend]:hover {
     background-color: #4D0000;
     border: 1px solid #4D0000;
     cursor: pointer;

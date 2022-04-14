@@ -61,6 +61,12 @@
         case "/pages/messenger.php":
             active('msg');
             break;
+        case "/pages/createapost.php":
+            active('lfg');
+            break;
+        case "/pages/howtojoin.php":
+            active('msg');
+            break;
         default:
             active('home');
             break;

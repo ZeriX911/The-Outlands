@@ -44,8 +44,6 @@ get_posts();
                         <td><?php echo $post->get_team_name()  ?></td>
                         <td><?php echo $post->get_players() ?>/3</td>
                         <td><?php echo $post->get_style() ?></td>
-                        <td><input type="button" class="btn" value="View"></td>
-                        <td><input  class="btn" type="button" value="Message"></td>
                         <?php 
                          if ($post->get_creator_id()==$_SESSION['id'] || $_SESSION['id'] == 1) {
                             ?>
@@ -55,6 +53,7 @@ get_posts();
                         }else{
                             echo "<td></td>";
                         } ?>
+                        <td><input  class="btn" type="button" onclick="location.href='howtojoin.php'" value="Join"></td>
                     </tr>
                     <?php } ?>
                     </tr>
