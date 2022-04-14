@@ -47,6 +47,16 @@ if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] === false) {
                     </form>
 
                     <form method="post" action="edituserdata.php">
+                    <?php if (isset($_GET['error'])) {
+                    ?>
+                    <div><?php echo $_GET['error'];?></div>
+                    <?php
+                    }else{?>
+                     <div></div>
+                    
+                    <?php
+                }
+                ?>
 
                     <div id="date-container"><label for="date">Change Date Of Birth</label><br>
                         <input type="date" id="date" name="datepicker" min="1900-01-01" max="2022-01-01" value="2000-01-01">
