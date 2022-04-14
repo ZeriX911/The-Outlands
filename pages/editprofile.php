@@ -50,6 +50,20 @@ if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] === false) {
                     <div id="email-container"><label for="email">Change E-mail</label><br>
                         <input type="email" name="email" id="email" placeholder="Change E-mail">
                     </div>
+
+                    <div id="radio-container">
+                        <label for="emailvisibility">Change E-mail visibility</label><br>
+
+                        <input type="radio" id="radiopublic" name="radiopublicity" value="public" checked>
+                        <label for="public">Public</label>
+
+                        <input type="radio" id="radionotpublic" name="radiopublicity" value="not public">
+                        <label for="notpublic">Not Public</label><br>
+                    </div>
+
+                    <div id="send-container">
+                        <input type="submit" name="editprofile" value="APPLY CHANGES">
+                    </div>
                     </form>
                     </main>
 

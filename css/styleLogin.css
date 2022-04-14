@@ -17,7 +17,8 @@ label {
 #pwd-container,
 #email-container,
 #date-container,
-#pwd-verify-container {
+#pwd-verify-container,
+#radio-container {
     margin-top: 25px;
 }
 
