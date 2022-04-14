@@ -10,6 +10,7 @@ if(isset($_POST["editprofile"]))
 {
     $date = $_POST["datepicker"];
     $email = $_POST["emailchange"];
+    $emailpublicity = $_POST["radiopublicity"];
 
     if($date != NULL || $email != NULL)
     {
@@ -35,7 +36,7 @@ if(isset($_POST["editprofile"]))
             }
         }
 
-        if(isset($_POST["radiopublic"]))
+        if($emailpublicity == "public")
         {
             $sql3 = "UPDATE users SET emailpublic = 1 WHERE id = $uid";
             $result3 = $connect -> query($sql3);
@@ -45,7 +46,7 @@ if(isset($_POST["editprofile"]))
                 error("Couldn't change e-mail visibility");
             }
         }
-        else if(isset($_POST["radionotpublic"]))
+        else if($emailpublicity == "notpublic")
         {
             $sql4 = "UPDATE users SET emailpublic = 0 WHERE id = $uid";
             $result4 = $connect -> query($sql4);

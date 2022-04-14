@@ -69,10 +69,10 @@ if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] === false) {
                     <div id="radio-container">
                         <label for="emailvisibility">Change E-mail visibility</label><br>
 
-                        <input type="radio" id="radiopublic" name="radiopublic" value="public" checked>
+                        <input type="radio" id="radiopublic" name="radiopublicity" value="public" checked>
                         <label for="public">Public</label>
 
-                        <input type="radio" id="radionotpublic" name="radionotpublic" value="notpublic">
+                        <input type="radio" id="radionotpublic" name="radiopublicity" value="notpublic">
                         <label for="notpublic">Not Public</label><br>
                     </div>
 
