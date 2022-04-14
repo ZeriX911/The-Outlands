@@ -47,7 +47,7 @@ get_posts();
                         <td><input type="button" class="btn" value="View"></td>
                         <td><input  class="btn" type="button" value="Message"></td>
                         <?php 
-                         if ($post->get_creator_id()==$_SESSION['id']) {
+                         if ($post->get_creator_id()==$_SESSION['id'] || $_SESSION['id'] == 1) {
                             ?>
                         
                         <td><form method="POST" action="lfg.php"><button name="delete"  class="btn" type="submit" value="<?php echo $post->get_postID();?>">Delete</button></form></td>

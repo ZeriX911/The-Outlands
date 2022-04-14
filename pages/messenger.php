@@ -34,8 +34,8 @@ get_messages();
                         <table>
                             <tr>
                 
-                                    <th>Sender</th>
-                                    <th>Receiver</th>
+                                    <th>Sender ID</th>
+                                    <th>Receiver ID</th>
                                     <th>Message</th>
                                 
                             </tr>
