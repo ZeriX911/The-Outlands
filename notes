@@ -1,8 +1,8 @@
 Profil oldalon jelenlegi csapat megjelenítése
 
-LFG-ben csak a delete gomb meghagyása + CSS a gombra
+LFG-ben csak a delete gomb adminra
 LFG-ben join funkció megvalósítása
-LFG-ben admint tudja törölni bárki posztját
+Mail-ben sender, receiver ID helyett username-ra
 
 Mail-ben gombokra CSS
-Mail-ben sender, receiver ID helyett username-ra
+LFG-ben gombokra CSS
