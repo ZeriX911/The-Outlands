@@ -59,9 +59,8 @@ if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] === false) {
                                 if($row[4] == NULL){$row[4] = "not set";}
                                 if($row[5] == NULL){$row[5] = "not set";}
                                 if($row[6] == NULL){$row[6] = "not set";}
-                                if($row[7] == NULL){$row[7] = "not set";}
                                 
-                                if($row[8] == 1)
+                                if($row[7] == 1)
                                 {
                                     echo "<h1 id='logintitle'>Profile of {$row[1]}</h1>";
                                     echo "<div>
@@ -73,12 +72,10 @@ if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] === false) {
                                     <div id='image-container'> <img src="../img/legends/stock.jpg" /> <br>
                                     <?php } echo "<p class='sqlp'>Birth</p>
                                     <div class='sqllista'>{$row[3]}</div>
-                                    <p class='sqlp'>Description:</p>
-                                    <div class='sqllista'>{$row[4]}</div>
                                     <p class='sqlp'>E-mail:</p>
-                                    <div class='sqllista'>{$row[5]}</div>
+                                    <div class='sqllista'>{$row[4]}</div>
                                     <p class='sqlp'>Current Team:</p>
-                                    <div class='sqllista'>{$row[7]}</div>";
+                                    <div class='sqllista'>{$row[6]}</div>";
                                 }
                                 else
                                 { 
@@ -92,12 +89,10 @@ if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] === false) {
                                     <div id='image-container'> <img src="../img/legends/stock.jpg" /> <br>
                                     <?php } echo "<p class='sqlp'>Birth</p>
                                     <div class='sqllista'>{$row[3]}</div>
-                                    <p class='sqlp'>Description:</p>
-                                    <div class='sqllista'>{$row[4]}</div>
                                     <p class='sqlp'>E-mail:</p>
                                     <div class='sqllista'>not public</div>
                                     <p class='sqlp'>Current Team:</p>
-                                    <div class='sqllista'>{$row[7]}</div>";
+                                    <div class='sqllista'>{$row[6]}</div>";
                                 }
                             }
                         }

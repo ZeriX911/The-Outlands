@@ -42,7 +42,15 @@ if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] === false) {
                     <label for="file">Upload a profile picture</label><br/>
                     <input type="file" name="file" />
                     <input type="submit" id="uploadImage" name="upload" value="Upload" >
-                        </form>
+
+                    <div id="date-container"><label for="date">Change Date Of Birth</label><br>
+                        <input type="date" id="date" name="date" min="1900-01-01" max="2022-01-01" value="2000-01-01">
+                    </div>
+
+                    <div id="email-container"><label for="email">Change E-mail</label><br>
+                        <input type="email" name="email" id="email" placeholder="Change E-mail">
+                    </div>
+                    </form>
                     </main>
 
             <footer>

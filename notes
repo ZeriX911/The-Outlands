@@ -1,19 +1,14 @@
-1.)Regisztrációnál és loginnál a hibaüzenetek láthatóbbá tétele (pl. betűtípus átállításával)
-
-
-2.) Profil oldal létrehozása:
+Profil oldal létrehozása:
         -név szerkesztés
         -jelszó szerkesztés
         -email hozzáadás
         -leírás hozzáadás
         -kép feltöltése
         -jelenlegi csapat megjelenítése
-
-        -logout gomb
-
         -adatok láthatóságának módosítása
 
-        -profil törlése
+LFG-ben csak a delete gomb meghagyása + CSS a gombra
+LFG-ben join funkció megvalósítása
 
-3.) Üzenetküldő és fogadó oldal létrehozása:
-        -report an issue type beat tehát csak az adminnak lehet írni az admin meg tud válaszolni az üzenetekre ezt a felhasználó eltudja olvani
+Mail-ben gombokra CSS
+Mail-ben sender, receiver ID helyett username-ra
