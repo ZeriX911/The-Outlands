@@ -45,6 +45,7 @@ function get_messages(){
     $db='apexlfg';
     $query="Select * from msg where sender=".$_SESSION['id']." OR receiver=".$_SESSION['id'].";";
     $res = $connect->query($query);
+
     while($row = $res->fetch_row())
     {
         array_push($messages, new Message($row[2],$row[3],$row[4],$row[1]) );
