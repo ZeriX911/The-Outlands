@@ -15,7 +15,7 @@ if(isset($_POST["editprofile"]))
     {
         if($date != NULL)
         {
-            $sql1 = "UPDATE users SET birth = $date WHERE id = $uid";
+            $sql1 = "UPDATE users SET birth = '$date' WHERE id = $uid";
             $result1 = $connect -> query($sql1);
 
             if(!$result1)
@@ -26,7 +26,7 @@ if(isset($_POST["editprofile"]))
 
         if($email != NULL)
         {
-            $sql2 = "UPDATE users SET email = $email WHERE id = $uid";
+            $sql2 = "UPDATE users SET email = '$email' WHERE id = $uid";
             $result2 = $connect -> query($sql2);
 
             if(!$result2)
@@ -65,5 +65,8 @@ else
 {
     error("Something went wrong");
 }
+
+$connect -> close();
+header("Location: profile.php");
 
 ?>
