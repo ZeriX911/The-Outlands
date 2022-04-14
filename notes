@@ -1,11 +1,4 @@
-Profil oldal létrehozása:
-        -név szerkesztés
-        -jelszó szerkesztés
-        -email hozzáadás
-        -leírás hozzáadás
-        -kép feltöltése
-        -jelenlegi csapat megjelenítése
-        -adatok láthatóságának módosítása
+Profil oldalon jelenlegi csapat megjelenítése
 
 LFG-ben csak a delete gomb meghagyása + CSS a gombra
 LFG-ben join funkció megvalósítása
