@@ -42,6 +42,9 @@ if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] === false) {
                     <label for="file">Upload a profile picture</label><br/>
                     <input type="file" name="file" />
                     <input type="submit" id="uploadImage" name="upload" value="Upload" >
+                    </form>
+
+                    <form method="post" action="edituserdata.php">
 
                     <div id="date-container"><label for="date">Change Date Of Birth</label><br>
                         <input type="date" id="date" name="date" min="1900-01-01" max="2022-01-01" value="2000-01-01">
