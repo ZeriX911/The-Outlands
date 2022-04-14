@@ -9,6 +9,7 @@ Profil oldal létrehozása:
 
 LFG-ben csak a delete gomb meghagyása + CSS a gombra
 LFG-ben join funkció megvalósítása
+LFG-ben admint tudja törölni bárki posztját
 
 Mail-ben gombokra CSS
 Mail-ben sender, receiver ID helyett username-ra

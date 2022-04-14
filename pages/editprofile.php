@@ -1,6 +1,8 @@
 <?php
 session_start();
+
 include_once("connect.php");
+
 if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] === false) {
   header("Location: /pages/index.php");
   exit;
@@ -39,7 +41,7 @@ if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] === false) {
                     <?php
                 }
                 ?>
-                    <label for="file">Upload a profile picture</label><br/>
+                    <label for="file">Upload a profile picture (max: 2mb)</label><br/>
                     <input type="file" name="file" />
                     <input type="submit" id="uploadImage" name="upload" value="Upload" >
                     </form>
@@ -47,11 +49,11 @@ if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] === false) {
                     <form method="post" action="edituserdata.php">
 
                     <div id="date-container"><label for="date">Change Date Of Birth</label><br>
-                        <input type="date" id="date" name="date" min="1900-01-01" max="2022-01-01" value="2000-01-01">
+                        <input type="date" id="date" name="datepicker" min="1900-01-01" max="2022-01-01" value="2000-01-01">
                     </div>
 
                     <div id="email-container"><label for="email">Change E-mail</label><br>
-                        <input type="email" name="email" id="email" placeholder="Change E-mail">
+                        <input type="email" name="emailchange" id="email" placeholder="Change E-mail">
                     </div>
 
                     <div id="radio-container">
