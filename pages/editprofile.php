@@ -40,7 +40,7 @@ if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] === false) {
                     <form method="post" action="edituserdata.php">
                     <?php if (isset($_GET['error'])) {
                     ?>
-                    <div style="margin:20px;font-size:medium;color:black;background-color:red; padding: 5px;"><?php echo $_GET['error'];?></div>
+                    <div style="margin:20px;font-size:medium;background-color:red; padding: 5px;"><?php echo $_GET['error'];?></div>
                     <?php
                     }else{?>
                      <div></div>
