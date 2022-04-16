@@ -45,7 +45,7 @@ get_posts();
                         <td><?php echo $post->get_players() ?>/3</td>
                         <td><?php echo $post->get_style() ?></td>
                         <?php 
-                         if ($post->get_creator_id()==$_SESSION['id'] || $_SESSION['id'] == 1) {
+                         if ($post->get_creator_id()==$_SESSION['id'] || $_SESSION['admin'] == 1) {
                             ?>
                         
                         <td><form method="POST" action="lfg.php"><button name="delete"  class="btn" type="submit" value="<?php echo $post->get_postID();?>">Delete</button></form></td>

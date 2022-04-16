@@ -110,7 +110,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
                         </div>-->
                         <div id="pwd-container <?php echo (!empty($password_err)) ? 'has-error' : ''; ?>"><label for="password">Password (min. 6 characters)</label><br>
                             <input type="password" name="password" id="password" placeholder="Password" value="<?php echo $password; ?>"></br>
-                            <span class="help-block"><?php echo $password_err; ?></span><br>
+                            <span class="help-block "><?php echo $password_err; ?></span><br>
                         </div>
                         <div id="pwd-verify-container <?php echo (!empty($confirm_password_err)) ? 'has-error' : ''; ?>"><label for="confirm_password">Verify Password</label><br>
                             <input type="password" name="confirm_password" id="confirm_password" placeholder="Verify password" value="<?php echo $confirm_password; ?>"></br>

@@ -186,7 +186,7 @@ footer {
     margin-bottom: 10%;
 }
 
-#image-container > img {
+#image-container>img {
     width: 100px;
     height: auto;
 }
@@ -208,9 +208,15 @@ footer {
     font-family: EA-Games;
 }
 
-
 @media print {
     nav {
         display: none;
     }
+}
+
+.error {
+    margin: 20px;
+    font-size: medium;
+    background-color: red;
+    padding: 5px;
 }

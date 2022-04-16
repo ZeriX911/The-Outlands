@@ -32,7 +32,7 @@ if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] === false) {
                     <form action="upload.php" method="post" enctype="multipart/form-data">
                     <h1 id='logintitle'>Edit Profile</h1>
                    
-                    <label for="file">Upload a profile picture (max: 2mb)</label><br/>
+                    <label for="file">Upload a profile picture (max: 1mb)</label><br/>
                     <input type="file" name="file" />
                     <input type="submit" id="uploadImage" name="upload" value="Upload" >
                     </form>
@@ -40,7 +40,7 @@ if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] === false) {
                     <form method="post" action="edituserdata.php">
                     <?php if (isset($_GET['error'])) {
                     ?>
-                    <div style="margin:20px;font-size:medium;background-color:red; padding: 5px;"><?php echo $_GET['error'];?></div>
+                    <div class="error"><?php echo $_GET['error'];?></div>
                     <?php
                     }else{?>
                      <div></div>

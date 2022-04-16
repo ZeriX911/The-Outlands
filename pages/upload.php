@@ -10,7 +10,7 @@ function error($msg){
 if(isset($_POST['upload']))
 {   
  $file_loc = $_FILES['file']['tmp_name'];
- $allowed = array('gif', 'png', 'jpg');
+ $allowed = array('png', 'jpg');
  $filename = $_FILES['file']['name'];
  $ext = pathinfo($filename, PATHINFO_EXTENSION);
  if (!in_array($ext, $allowed)) {
