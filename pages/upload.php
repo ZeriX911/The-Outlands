@@ -5,10 +5,19 @@ $msg="";
 include_once('connect.php');
 function error($msg){
     header('Location: editprofile.php?error='.$msg);
+    exit;
 }
 if(isset($_POST['upload']))
 {   
  $file_loc = $_FILES['file']['tmp_name'];
+ $allowed = array('gif', 'png', 'jpg');
+ $filename = $_FILES['file']['name'];
+ $ext = pathinfo($filename, PATHINFO_EXTENSION);
+ if (!in_array($ext, $allowed)) {
+  error($ext." not allowed for file extension !");
+  //error("Not allowed >:(");
+  
+}
  if ($file_loc==="") {
     error("No image has been selected");
  }

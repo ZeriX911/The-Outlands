@@ -31,16 +31,7 @@ if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] === false) {
                     <main id="Container">
                     <form action="upload.php" method="post" enctype="multipart/form-data">
                     <h1 id='logintitle'>Edit Profile</h1>
-                    <?php if (isset($_GET['error'])) {
-                    ?>
-                    <div><?php echo $_GET['error'];?></div>
-                    <?php
-                    }else{?>
-                     <div></div>
-                    
-                    <?php
-                }
-                ?>
+                   
                     <label for="file">Upload a profile picture (max: 2mb)</label><br/>
                     <input type="file" name="file" />
                     <input type="submit" id="uploadImage" name="upload" value="Upload" >
@@ -49,7 +40,7 @@ if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] === false) {
                     <form method="post" action="edituserdata.php">
                     <?php if (isset($_GET['error'])) {
                     ?>
-                    <div><?php echo $_GET['error'];?></div>
+                    <div style="margin:20px;font-size:medium;color:black;background-color:red; padding: 5px;"><?php echo $_GET['error'];?></div>
                     <?php
                     }else{?>
                      <div></div>
